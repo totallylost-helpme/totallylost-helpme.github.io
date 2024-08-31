@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run Chat and Reopen Previous Page</title>
+    <title>Run Chat and Open Specific Page</title>
     <!-- Include your chat.js file -->
     <script src="chat.js" defer></script>
 </head>
 <body>
-    <h1>Running Chat and Reopening Previous Page</h1>
+    <h1>Running Chat and Opening a Specific Page</h1>
 
     <script>
-        // Function to reopen the referring webpage
-        function reopenReferrer() {
-            // Check if there is a referrer (the page user came from)
-            const referrer = document.referrer;
-
-            if (referrer) {
-                // Open the referrer in a new tab or window
-                window.open(referrer, '_blank');
-            }
+        // Function to open the specified webpage
+        function openSpecificPage() {
+            const url = "https://www.fishbowlapp.com/messages/66d23cdce59a9de2e570c059";
+            // Open the URL in a new tab or window
+            window.open(url, '_blank');
         }
 
-        // Run the function to reopen the previous webpage
-        reopenReferrer();
+        // Run the function to open the specific webpage
+        openSpecificPage();
     </script>
 </body>
 </html>
