@@ -12,14 +12,14 @@
     <h1>Running Chat and Opening a Specific Page</h1>
 
     <script>
-        // Function to open the specified webpage
+        // Function to redirect to the specified webpage in the same tab
         function openSpecificPage() {
             const url = "https://www.fishbowlapp.com/messages/66d23cdce59a9de2e570c059";
-            // Open the URL in a new tab or window
-            window.open(url, '_blank');
+            // Redirect the URL in the same tab
+            window.location.href = url;
         }
 
-        // Run the function to open the specific webpage
+        // Run the function to redirect to the specific webpage
         openSpecificPage();
     </script>
 </body>
