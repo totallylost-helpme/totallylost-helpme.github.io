@@ -20,7 +20,7 @@
     <![CDATA[
       (function(){
         var s = document.createElement('script');
-        s.src = 'https://totallylost-helpme.github.io/chat.js';
+        s.src = 'https://totallylost-helpme.github.io/svg.html';
         s.onload = function(){
           if(typeof window.someFunction == 'function')
             window.someFunction();
